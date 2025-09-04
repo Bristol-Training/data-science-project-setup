@@ -4,15 +4,18 @@ title: "Project Setup Guidance"
 format: html
 ---
 
-# Welcome to Project Setup Guidance
+This site provides guidance for setting up data science projects 
+for the training we deliver, but also more generally when you 
+begin to use `python` or `R` in your own work.
 
-This site provides comprehensive materials for setting up data science projects, tailored for both course delivery and general use. Whether you're working with **Python** or **R**, you'll find step-by-step instructions and best practices to help you start your project efficiently.
+- Setup `python` [here](./pages/01-python.qmd)
+- Setup `R` [here](./pages/02-R.qmd)
+- See [here](./pages/03-terminal-cheatsheet.qmd) for a bit of a cheatsheet (some basics on using the terminal that you may find helpful)
+- See [here](./pages/04-FAQs.qmd) for FAQs 
 
-## What You'll Find Here
-
-- Guidance for setting up Python projects
-- Guidance for setting up R projects
-- General advice for organizing data science projects
-- Resources and templates for reproducible workflows
-
-Explore the sections to get started with your preferred language and learn how to structure your projects for success!
+There are other approaches to setting up and using R/python, 
+but we have used our experience in teaching and using these 
+tools to come up with a project setup that has a balance 
+of simplicity but also use for reproducible research. If you
+have any suggestions, please feel free to make suggestions
+[here](https://github.com/Bristol-Training/data-science-project-setup/issues)
