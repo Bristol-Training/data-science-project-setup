@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>r – Data Science Project Setup</title>
+<title>Python Environment Setup – Data Science Project Setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/03-terminal-cheatsheet.html" rel="next">
-<link href="../pages/01-python.html" rel="prev">
+<link href="../pages/03-R.html" rel="next">
+<link href="../pages/01-initial-setup.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a10154459f931fff05780d73d42d1199.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-879a5a930cb54ed00ab785b4a00eb2a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/02-R.html">R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/02-python.html">Python</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,25 +153,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/01-python.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/01-initial-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">General Setup (Folders)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/02-python.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/02-R.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pages/03-R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/03-terminal-cheatsheet.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/04-terminal-cheatsheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminal Cheatsheet</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/04-FAQs.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/05-FAQs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQs</span></a>
   </div>
 </li>
@@ -185,74 +191,135 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installing-r-and-rstudio" id="toc-installing-r-and-rstudio" class="nav-link active" data-scroll-target="#installing-r-and-rstudio">Installing R and RStudio</a></li>
-  <li><a href="#creating-and-working-within-a-folder" id="toc-creating-and-working-within-a-folder" class="nav-link" data-scroll-target="#creating-and-working-within-a-folder">Creating and Working Within a Folder</a></li>
-  <li><a href="#bonus-using-renv-for-package-management" id="toc-bonus-using-renv-for-package-management" class="nav-link" data-scroll-target="#bonus-using-renv-for-package-management">Bonus: Using <code>renv</code> for Package Management</a></li>
+  <li><a href="#install-package-manager" id="toc-install-package-manager" class="nav-link active" data-scroll-target="#install-package-manager">Install Package Manager</a></li>
+  <li><a href="#install-uv" id="toc-install-uv" class="nav-link" data-scroll-target="#install-uv">Install UV</a></li>
+  <li><a href="#move-into-project-directory" id="toc-move-into-project-directory" class="nav-link" data-scroll-target="#move-into-project-directory">Move into Project Directory</a>
+  <ul class="collapse">
+  <li><a href="#create-a-virtual-environment" id="toc-create-a-virtual-environment" class="nav-link" data-scroll-target="#create-a-virtual-environment">Create a Virtual Environment</a></li>
+  <li><a href="#install-packages" id="toc-install-packages" class="nav-link" data-scroll-target="#install-packages">Install Packages</a></li>
+  </ul></li>
+  <li><a href="#opening-jupyterlab" id="toc-opening-jupyterlab" class="nav-link" data-scroll-target="#opening-jupyterlab">Opening JupyterLab</a></li>
+  <li><a href="#create-a-notebook" id="toc-create-a-notebook" class="nav-link" data-scroll-target="#create-a-notebook">Create a Notebook</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/02-R.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/02-python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Python Environment Setup</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="installing-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="installing-r-and-rstudio">Installing R and RStudio</h2>
-<ol type="1">
-<li><strong>Download and Install R</strong>
-<ul>
-<li>Visit <a href="https://cran.r-project.org/">CRAN</a> and download R for your operating system.</li>
-<li>Follow the installation instructions.</li>
-</ul></li>
-<li><strong>Download and Install RStudio</strong>
-<ul>
-<li>Visit <a href="https://posit.co/download/rstudio-desktop/">RStudio Download</a> and download RStudio Desktop.</li>
-<li>Install RStudio after installing R.</li>
-</ul></li>
-</ol>
-<hr>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Here we show you how to setup a python project. For most python projects, <a href="https://docs.astral.sh/uv/">uv</a> will be the best choice. For notes on when you may want to use other package managers, see <a href="../pages/05-FAQs.html#">here</a></p>
+<p>In the <a href="../pages/01-initial-setup.html">previous section</a>, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.</p>
+<section id="install-package-manager" class="level2">
+<h2 class="anchored" data-anchor-id="install-package-manager">Install Package Manager</h2>
+<p>Package manager installation should only need to be done <strong>once</strong> on your computer.</p>
+<p>Instructions are included below. If you encounter any issues, see <a href="https://docs.astral.sh/uv/getting-started/installation/">here</a> for more installation methods to try. Or contact the JGI team</p>
 </section>
-<section id="creating-and-working-within-a-folder" class="level2">
-<h2 class="anchored" data-anchor-id="creating-and-working-within-a-folder">Creating and Working Within a Folder</h2>
-<ol type="1">
-<li><strong>Create a Project Folder</strong>
-<ul>
-<li>In RStudio, go to <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code>.</li>
-<li>Name your folder (e.g., <code>myproject</code>) and choose a location.</li>
-<li>Click <code>Create Project</code>.</li>
-</ul></li>
-<li><strong>Set Working Directory</strong>
-<ul>
-<li><p>RStudio automatically sets the working directory to your project folder.</p></li>
-<li><p>To check:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>To set manually:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/path/to/myproject"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
-</ol>
-<hr>
+<section id="install-uv" class="level2">
+<h2 class="anchored" data-anchor-id="install-uv">Install UV</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Open Command Prompt and run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bat code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>winget install astral<span class="at">-uv</span>.uv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Open Terminal and run:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-Ls</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Open Terminal and run:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-Ls</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>After installation, check that uv is available by typing <code>uv --version</code>, then pressing enter. You may need to restart your Command Prompt/Terminal for the changes to take effect.</p>
 </section>
-<section id="bonus-using-renv-for-package-management" class="level2">
-<h2 class="anchored" data-anchor-id="bonus-using-renv-for-package-management">Bonus: Using <code>renv</code> for Package Management</h2>
+<section id="move-into-project-directory" class="level2">
+<h2 class="anchored" data-anchor-id="move-into-project-directory">Move into Project Directory</h2>
+<p>Firstly, it is essential to:</p>
 <ol type="1">
-<li><p><strong>Initialize renv</strong> <code>r     install.packages("renv")     renv::init()</code></p></li>
-<li><p><strong>Create a DESCRIPTION File</strong></p>
-<ul>
-<li><p>In your project folder, create a file named <code>DESCRIPTION</code> with content like:</p>
-<pre><code>Package: myproject
-Type: Project
-Title: Example Project
-Version: 0.1.0
-Imports:
-      dplyr,
-      ggplot2</code></pre></li>
-</ul></li>
-<li><p><strong>Install usethis and Use DESCRIPTION</strong> <code>r     install.packages("usethis")     usethis::use_description()</code></p></li>
-<li><p><strong>Install Packages from DESCRIPTION</strong> <code>r     renv::install("dplyr")     renv::install("ggplot2")</code></p></li>
-<li><p><strong>Snapshot the Environment</strong> <code>r     renv::snapshot()</code></p></li>
+<li>Open your Command Prompt/Terminal.</li>
+<li>Create or navigate to your project directory.</li>
 </ol>
-<p>This workflow helps you organize your project, manage packages reproducibly, and share your setup with others.</p>
+<p>If you have not done this, or it is not clear how to do so, please refer to the <a href="../pages/01-initial-setup.html">previous section</a>.</p>
+<p>To check you are in the correct directory, enter the following command</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode bat code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<section id="create-a-virtual-environment" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-virtual-environment">Create a Virtual Environment</h3>
+<p>Enter the following command to create a minimal virtual environment:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init <span class="at">--bare</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="install-packages" class="level3">
+<h3 class="anchored" data-anchor-id="install-packages">Install Packages</h3>
+<p>For all projects we need jupyterlab. This can be installed with:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add jupyterlab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For the “Introduction to Data Analysis in Python” course (see <a href="https://bristol-training.github.io/introduction-to-data-analysis-in-python/">here</a>), you would need the <code>pandas</code> and <code>seaborn</code> package. You can install this with:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add pandas seaborn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Generally speaking, to add a package to your environment, you can use the following command:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="op">&lt;</span>package-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace <code>&lt;package-name&gt;</code> with the name of the package you want to install.</p>
+</section>
+</section>
+<section id="opening-jupyterlab" class="level2">
+<h2 class="anchored" data-anchor-id="opening-jupyterlab">Opening JupyterLab</h2>
+<p>Now you can open JupyterLab with:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter lab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will take some time, and you will see text being printed in the terminal. Once JupyterLab is running, a browser window should pop open. This window should like similar to the image below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/jupyterlab.png" class="img-fluid figure-img"></p>
+<figcaption>JupyterLab Window</figcaption>
+</figure>
+</div>
+</section>
+<section id="create-a-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-notebook">Create a Notebook</h2>
+<p>To create a notebook, click the “Notebook” icon in the JupyterLab launcher. The window should now look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/jupyterlab-notebook.png" class="img-fluid figure-img"></p>
+<figcaption>JupyterLab Notebook, with key features highlighted with arrows and blue boxes.</figcaption>
+</figure>
+</div>
+<p>In each cell, python code can be entered. It can be run by clicking the “Run” button or by pressing <code>Shift + Enter</code>.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Well done, you have created an interactive JupyterLab environment for your Python project! You should now be able to follow along with our <a href="https://bristol-training.github.io/courses.html#python">Python courses</a>.</p>
+<p>The steps in this page are crucial for setting up your Python environment effectively, and we recommend you follow these for your own projects, as well as for our courses.</p>
 
 
 </section>
@@ -659,13 +726,13 @@ Imports:
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/01-python.html" class="pagination-link" aria-label="Python">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Python</span>
+      <a href="../pages/01-initial-setup.html" class="pagination-link" aria-label="General Setup (Folders)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">General Setup (Folders)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/03-terminal-cheatsheet.html" class="pagination-link" aria-label="Terminal Cheatsheet">
-        <span class="nav-page-text">Terminal Cheatsheet</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/03-R.html" class="pagination-link" aria-label="R">
+        <span class="nav-page-text">R</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -673,11 +740,11 @@ Imports:
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
+<p>Content written by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/02-R.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/02-python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

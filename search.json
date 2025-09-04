@@ -1,77 +1,7 @@
 [
   {
-    "objectID": "pages/01-python.html",
-    "href": "pages/01-python.html",
-    "title": "Python Environment Setup",
-    "section": "",
-    "text": "Setting Up Your Python Environment\nTo ensure a reproducible and isolated Python environment for your project, you can use either UV (recommended) or Pixi as your package manager.\n\nUV (Recommended)Pixi\n\n\nUV is a fast Python package manager and environment tool.\n\nInstall UV\nIf you don’t have UV installed, run: sh     curl -Ls https://github.com/astral-sh/uv/releases/latest/download/uv-installer.sh | sh\nCreate a new environment\nsh     uv venv .venv\nActivate the environment\nsh     source .venv/bin/activate\nInstall packages\nFor example, to install numpy and pandas: sh     uv pip install numpy pandas\nFreeze dependencies\nsh     uv pip freeze &gt; requirements.txt\n\n\n\nPixi is a cross-platform package manager for Python and other languages.\n\nInstall Pixi\nsh     curl -fsSL https://pixi.sh/install.sh | bash\nInitialize a new project\nsh     pixi init\nAdd dependencies\nFor example, to add numpy and pandas: sh     pixi add numpy pandas\nActivate the environment\nsh     pixi shell",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-R.html",
-    "href": "pages/02-R.html",
-    "title": "Data Science Project Setup",
-    "section": "",
-    "text": "Download and Install R\n\nVisit CRAN and download R for your operating system.\nFollow the installation instructions.\n\nDownload and Install RStudio\n\nVisit RStudio Download and download RStudio Desktop.\nInstall RStudio after installing R.",
-    "crumbs": [
-      "R"
-    ]
-  },
-  {
-    "objectID": "pages/02-R.html#installing-r-and-rstudio",
-    "href": "pages/02-R.html#installing-r-and-rstudio",
-    "title": "Data Science Project Setup",
-    "section": "",
-    "text": "Download and Install R\n\nVisit CRAN and download R for your operating system.\nFollow the installation instructions.\n\nDownload and Install RStudio\n\nVisit RStudio Download and download RStudio Desktop.\nInstall RStudio after installing R.",
-    "crumbs": [
-      "R"
-    ]
-  },
-  {
-    "objectID": "pages/02-R.html#creating-and-working-within-a-folder",
-    "href": "pages/02-R.html#creating-and-working-within-a-folder",
-    "title": "Data Science Project Setup",
-    "section": "Creating and Working Within a Folder",
-    "text": "Creating and Working Within a Folder\n\nCreate a Project Folder\n\nIn RStudio, go to File &gt; New Project &gt; New Directory.\nName your folder (e.g., myproject) and choose a location.\nClick Create Project.\n\nSet Working Directory\n\nRStudio automatically sets the working directory to your project folder.\nTo check:\ngetwd()\nTo set manually:\nsetwd(\"/path/to/myproject\")",
-    "crumbs": [
-      "R"
-    ]
-  },
-  {
-    "objectID": "pages/02-R.html#bonus-using-renv-for-package-management",
-    "href": "pages/02-R.html#bonus-using-renv-for-package-management",
-    "title": "Data Science Project Setup",
-    "section": "Bonus: Using renv for Package Management",
-    "text": "Bonus: Using renv for Package Management\n\nInitialize renv r     install.packages(\"renv\")     renv::init()\nCreate a DESCRIPTION File\n\nIn your project folder, create a file named DESCRIPTION with content like:\nPackage: myproject\nType: Project\nTitle: Example Project\nVersion: 0.1.0\nImports:\n      dplyr,\n      ggplot2\n\nInstall usethis and Use DESCRIPTION r     install.packages(\"usethis\")     usethis::use_description()\nInstall Packages from DESCRIPTION r     renv::install(\"dplyr\")     renv::install(\"ggplot2\")\nSnapshot the Environment r     renv::snapshot()\n\nThis workflow helps you organize your project, manage packages reproducibly, and share your setup with others.",
-    "crumbs": [
-      "R"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Project Setup Guidance",
-    "section": "",
-    "text": "This site provides comprehensive materials for setting up data science projects, tailored for both course delivery and general use. Whether you’re working with Python or R, you’ll find step-by-step instructions and best practices to help you start your project efficiently.\n\n\n\nGuidance for setting up Python projects\nGuidance for setting up R projects\nGeneral advice for organizing data science projects\nResources and templates for reproducible workflows\n\nExplore the sections to get started with your preferred language and learn how to structure your projects for success!",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#what-youll-find-here",
-    "href": "index.html#what-youll-find-here",
-    "title": "Project Setup Guidance",
-    "section": "",
-    "text": "Guidance for setting up Python projects\nGuidance for setting up R projects\nGeneral advice for organizing data science projects\nResources and templates for reproducible workflows\n\nExplore the sections to get started with your preferred language and learn how to structure your projects for success!",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "pages/03-terminal-cheatsheet.html",
-    "href": "pages/03-terminal-cheatsheet.html",
+    "objectID": "pages/04-terminal-cheatsheet.html",
+    "href": "pages/04-terminal-cheatsheet.html",
     "title": "Terminal Cheatsheet",
     "section": "",
     "text": "A terminal (also called a command prompt on Windows) is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.\n\nWindows: The terminal is called Command Prompt or PowerShell.\nMac: The terminal app is called Terminal.\nLinux: Most distributions include a Terminal application.",
@@ -80,8 +10,8 @@
     ]
   },
   {
-    "objectID": "pages/03-terminal-cheatsheet.html#what-is-a-terminal-or-command-prompt",
-    "href": "pages/03-terminal-cheatsheet.html#what-is-a-terminal-or-command-prompt",
+    "objectID": "pages/04-terminal-cheatsheet.html#what-is-a-terminal-or-command-prompt",
+    "href": "pages/04-terminal-cheatsheet.html#what-is-a-terminal-or-command-prompt",
     "title": "Terminal Cheatsheet",
     "section": "",
     "text": "A terminal (also called a command prompt on Windows) is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.\n\nWindows: The terminal is called Command Prompt or PowerShell.\nMac: The terminal app is called Terminal.\nLinux: Most distributions include a Terminal application.",
@@ -90,8 +20,8 @@
     ]
   },
   {
-    "objectID": "pages/03-terminal-cheatsheet.html#basic-terminal-commands",
-    "href": "pages/03-terminal-cheatsheet.html#basic-terminal-commands",
+    "objectID": "pages/04-terminal-cheatsheet.html#basic-terminal-commands",
+    "href": "pages/04-terminal-cheatsheet.html#basic-terminal-commands",
     "title": "Terminal Cheatsheet",
     "section": "Basic Terminal Commands",
     "text": "Basic Terminal Commands\nHere are a few basic commands that work across most systems:\n\n\n\n\n\n\n\n\n\nCommand\nWindows\nMac/Linux\nDescription\n\n\n\n\nList files\ndir\nls\nShows files in the current folder\n\n\nChange folder\ncd foldername\ncd foldername\nMove into a folder\n\n\nGo up a folder\ncd ..\ncd ..\nMove up one level\n\n\nMake a folder\nmkdir name\nmkdir name\nCreate a new folder\n\n\nRemove a file\ndel file.txt\nrm file.txt\nDelete a file",
@@ -100,8 +30,8 @@
     ]
   },
   {
-    "objectID": "pages/03-terminal-cheatsheet.html#why-use-terminal-commands",
-    "href": "pages/03-terminal-cheatsheet.html#why-use-terminal-commands",
+    "objectID": "pages/04-terminal-cheatsheet.html#why-use-terminal-commands",
+    "href": "pages/04-terminal-cheatsheet.html#why-use-terminal-commands",
     "title": "Terminal Cheatsheet",
     "section": "Why Use Terminal Commands?",
     "text": "Why Use Terminal Commands?\nUsing basic terminal commands makes it easier to:\n\nNavigate projects: Quickly move between folders and files.\nRun scripts: Start Python or R scripts directly.\nManage environments: Create and activate virtual environments for Python or R.\nAutomate tasks: Use simple commands to install packages, update code, or clean up files.\n\nLearning a few terminal commands helps you work more efficiently and gives you more control over your Python and R projects.",
@@ -110,18 +40,138 @@
     ]
   },
   {
-    "objectID": "pages/04-FAQs.html",
-    "href": "pages/04-FAQs.html",
+    "objectID": "pages/01-initial-setup.html",
+    "href": "pages/01-initial-setup.html",
+    "title": "Initial Setup",
+    "section": "",
+    "text": "Here we show you how to:\nIf you already have a project created, simply skip the folder creation step, and move into the existing folder (We call this changing directory).",
+    "crumbs": [
+      "General Setup (Folders)"
+    ]
+  },
+  {
+    "objectID": "pages/01-initial-setup.html#open-your-command-promptterminal",
+    "href": "pages/01-initial-setup.html#open-your-command-promptterminal",
+    "title": "Initial Setup",
+    "section": "Open your Command Prompt/Terminal",
+    "text": "Open your Command Prompt/Terminal\n\nWindowsMacLinux\n\n\nClick the Start menu, search for Commant Prompt, and click to open. When you open the application you should will see a blinking that looks like this: cursor preceded by something like this:\nC:\\Users\\abc1234&gt;\nThe text before the cursor indicates what folder you are “in”. For more information on basic command prompt commands, please see here\n\n\nClick the Launchpad (rocket icon), type Terminal, and press Enter to open it. You should see a prompt that looks like:\nabc1234@Macbook %\nThe text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command pwd, then click Enter.\nFor more information on basic command prompt commands, please see here. Well done, you have opened the terminal!\n\n\nOpen your terminal by pressing Ctrl+Alt+T or searching for Terminal in your applications menu. You should see a prompt similar to:\nabc1234@Laptop:/\nThe text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command pwd, then click Enter.\nFor more information on basic command prompt commands, please see here. Well done, you have opened the terminal!",
+    "crumbs": [
+      "General Setup (Folders)"
+    ]
+  },
+  {
+    "objectID": "pages/01-initial-setup.html#creating-a-folder",
+    "href": "pages/01-initial-setup.html#creating-a-folder",
+    "title": "Initial Setup",
+    "section": "Creating a Folder",
+    "text": "Creating a Folder\nThe commands to make a directory and navigate into it are the same for Windows, Mac, and Linux. To create a new folder and move into it, use the following commands in your Command Prompt/Terminal:\nmkdir my_project\nPress Enter.",
+    "crumbs": [
+      "General Setup (Folders)"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html",
+    "href": "pages/02-python.html",
+    "title": "Python Environment Setup",
+    "section": "",
+    "text": "Here we show you how to setup a python project. For most python projects, uv will be the best choice. For notes on when you may want to use other package managers, see here\nIn the previous section, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#install-package-manager",
+    "href": "pages/02-python.html#install-package-manager",
+    "title": "Python Environment Setup",
+    "section": "Install Package Manager",
+    "text": "Install Package Manager\nPackage manager installation should only need to be done once on your computer.\nInstructions are included below. If you encounter any issues, see here for more installation methods to try. Or contact the JGI team",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#install-uv",
+    "href": "pages/02-python.html#install-uv",
+    "title": "Python Environment Setup",
+    "section": "Install UV",
+    "text": "Install UV\n\nWindowsMacLinux\n\n\nOpen Command Prompt and run:\nwinget install astral-uv.uv\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\n\nAfter installation, check that uv is available by typing uv --version, then pressing enter. You may need to restart your Command Prompt/Terminal for the changes to take effect.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#move-into-project-directory",
+    "href": "pages/02-python.html#move-into-project-directory",
+    "title": "Python Environment Setup",
+    "section": "Move into Project Directory",
+    "text": "Move into Project Directory\nFirstly, it is essential to:\n\nOpen your Command Prompt/Terminal.\nCreate or navigate to your project directory.\n\nIf you have not done this, or it is not clear how to do so, please refer to the previous section.\nTo check you are in the correct directory, enter the following command\n\nWindowsMacLinux\n\n\ncd\n\n\npwd\n\n\npwd\n\n\n\n\nCreate a Virtual Environment\nEnter the following command to create a minimal virtual environment:\nuv init --bare\n\n\nInstall Packages\nFor all projects we need jupyterlab. This can be installed with:\nuv add jupyterlab\nFor the “Introduction to Data Analysis in Python” course (see here), you would need the pandas and seaborn package. You can install this with:\nuv add pandas seaborn\nGenerally speaking, to add a package to your environment, you can use the following command:\nuv add &lt;package-name&gt;\nReplace &lt;package-name&gt; with the name of the package you want to install.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#opening-jupyterlab",
+    "href": "pages/02-python.html#opening-jupyterlab",
+    "title": "Python Environment Setup",
+    "section": "Opening JupyterLab",
+    "text": "Opening JupyterLab\nNow you can open JupyterLab with:\nuv run jupyter lab\nThis will take some time, and you will see text being printed in the terminal. Once JupyterLab is running, a browser window should pop open. This window should like similar to the image below.\n\n\n\nJupyterLab Window",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#create-a-notebook",
+    "href": "pages/02-python.html#create-a-notebook",
+    "title": "Python Environment Setup",
+    "section": "Create a Notebook",
+    "text": "Create a Notebook\nTo create a notebook, click the “Notebook” icon in the JupyterLab launcher. The window should now look like this:\n\n\n\nJupyterLab Notebook, with key features highlighted with arrows and blue boxes.\n\n\nIn each cell, python code can be entered. It can be run by clicking the “Run” button or by pressing Shift + Enter.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#summary",
+    "href": "pages/02-python.html#summary",
+    "title": "Python Environment Setup",
+    "section": "Summary",
+    "text": "Summary\nWell done, you have created an interactive JupyterLab environment for your Python project! You should now be able to follow along with our Python courses.\nThe steps in this page are crucial for setting up your Python environment effectively, and we recommend you follow these for your own projects, as well as for our courses.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Setup Guidance",
+    "section": "",
+    "text": "This site provides guidance for setting up data science projects for the training we deliver, but also more generally when you begin to use python or R in your own work.\nWe believe that the course we deliver should teach you programming concepts, but also should set you up for using these tools in your everyday work.\nMain Steps: Regardless of the language you are using, these are the key steps you need to follow when starting training, or creating a new data science project:\n\n\n\nProject Setup Diagram\n\n\nFor more specific instructions, see below:\n\nPython\nR\nSee here for a bit of a cheatsheet (some basics on using the terminal that you may find helpful)\nWhy do we do it like this? See here for FAQs\n\nThere are many approaches to setting up and using R/python, but we have used our experience in teaching and using these tools to come up with a project setup that has a balance of simplicity but also use for reproducible research. If you have any suggestions, please feel free to make suggestions here.\nSee here for more resources on environment management and setting up reproducible data science projects",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "pages/05-FAQs.html",
+    "href": "pages/05-FAQs.html",
     "title": "Frequently Asked Questions (FAQs)",
     "section": "",
-    "text": "We use Jupyter Lab as our primary IDE because it provides a simple and focused environment for learning. Unlike VS Code, Jupyter Lab does not require extensions or additional setup, and it does not include AI support or advanced features that may distract beginners. Our goal is to help students concentrate on core programming concepts without unnecessary complexity.\n\n\n\nWhile you are free to experiment with other IDEs on your own, all official coursework and assignments should be completed using Jupyter Lab to ensure consistency and compatibility.\n\n\n\nNo extensions are required. Jupyter Lab works out of the box for our course needs.\n\n\n\nNo, Jupyter Lab does not include built-in AI support. This helps you develop your own problem-solving skills.\n\n\n\nPlease reach out to your instructor or teaching assistant for help with technical problems related to Jupyter Lab or the course setup.",
+    "text": "Virtual environments help isolate your project’s dependencies from the rest of your system, ensuring that everyone working on the project uses the same package versions. This is essential for reproducible research, as it allows others to recreate your software environment and obtain the same results. Using a virtual environment also prevents conflicts between packages required for different projects.\n\n\n\n\n\n\n\n\n\nWe use Jupyter Lab as our primary IDE because it provides a simple and focused environment for learning. Unlike VS Code, Jupyter Lab does not require extensions or additional setup, and it does not include AI support or advanced features that may distract beginners. Our goal is to help students concentrate on core programming concepts without unnecessary complexity.\n\n\n\nWhile you are free to experiment with other IDEs on your own, we recommend using jupyter lab while you follow along with our courses.\n\n\n\nNo extensions are required. Jupyter Lab works out of the box for our course needs.\n\n\n\nPlease reach out to your instructor or teaching assistant for help with technical problems related to Jupyter Lab or the course setup.",
     "crumbs": [
       "FAQs"
     ]
   },
   {
-    "objectID": "pages/04-FAQs.html#why-do-we-use-jupyter-lab-instead-of-vs-code",
-    "href": "pages/04-FAQs.html#why-do-we-use-jupyter-lab-instead-of-vs-code",
+    "objectID": "pages/05-FAQs.html#why-do-i-need-to-use-a-virtual-environment",
+    "href": "pages/05-FAQs.html#why-do-i-need-to-use-a-virtual-environment",
+    "title": "Frequently Asked Questions (FAQs)",
+    "section": "",
+    "text": "Virtual environments help isolate your project’s dependencies from the rest of your system, ensuring that everyone working on the project uses the same package versions. This is essential for reproducible research, as it allows others to recreate your software environment and obtain the same results. Using a virtual environment also prevents conflicts between packages required for different projects.",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "pages/05-FAQs.html#why-do-we-use-jupyter-lab-instead-of-vs-code",
+    "href": "pages/05-FAQs.html#why-do-we-use-jupyter-lab-instead-of-vs-code",
     "title": "Frequently Asked Questions (FAQs)",
     "section": "",
     "text": "We use Jupyter Lab as our primary IDE because it provides a simple and focused environment for learning. Unlike VS Code, Jupyter Lab does not require extensions or additional setup, and it does not include AI support or advanced features that may distract beginners. Our goal is to help students concentrate on core programming concepts without unnecessary complexity.",
@@ -130,18 +180,18 @@
     ]
   },
   {
-    "objectID": "pages/04-FAQs.html#can-i-use-other-ides-for-my-assignments",
-    "href": "pages/04-FAQs.html#can-i-use-other-ides-for-my-assignments",
+    "objectID": "pages/05-FAQs.html#can-i-use-other-ides-for-my-assignments",
+    "href": "pages/05-FAQs.html#can-i-use-other-ides-for-my-assignments",
     "title": "Frequently Asked Questions (FAQs)",
     "section": "",
-    "text": "While you are free to experiment with other IDEs on your own, all official coursework and assignments should be completed using Jupyter Lab to ensure consistency and compatibility.",
+    "text": "While you are free to experiment with other IDEs on your own, we recommend using jupyter lab while you follow along with our courses.",
     "crumbs": [
       "FAQs"
     ]
   },
   {
-    "objectID": "pages/04-FAQs.html#do-i-need-to-install-any-extensions-for-jupyter-lab",
-    "href": "pages/04-FAQs.html#do-i-need-to-install-any-extensions-for-jupyter-lab",
+    "objectID": "pages/05-FAQs.html#do-i-need-to-install-any-extensions-for-jupyter-lab",
+    "href": "pages/05-FAQs.html#do-i-need-to-install-any-extensions-for-jupyter-lab",
     "title": "Frequently Asked Questions (FAQs)",
     "section": "",
     "text": "No extensions are required. Jupyter Lab works out of the box for our course needs.",
@@ -150,23 +200,60 @@
     ]
   },
   {
-    "objectID": "pages/04-FAQs.html#is-there-ai-assistance-available-in-jupyter-lab",
-    "href": "pages/04-FAQs.html#is-there-ai-assistance-available-in-jupyter-lab",
-    "title": "Frequently Asked Questions (FAQs)",
-    "section": "",
-    "text": "No, Jupyter Lab does not include built-in AI support. This helps you develop your own problem-solving skills.",
-    "crumbs": [
-      "FAQs"
-    ]
-  },
-  {
-    "objectID": "pages/04-FAQs.html#who-can-i-contact-if-i-have-technical-issues",
-    "href": "pages/04-FAQs.html#who-can-i-contact-if-i-have-technical-issues",
+    "objectID": "pages/05-FAQs.html#who-can-i-contact-if-i-have-technical-issues",
+    "href": "pages/05-FAQs.html#who-can-i-contact-if-i-have-technical-issues",
     "title": "Frequently Asked Questions (FAQs)",
     "section": "",
     "text": "Please reach out to your instructor or teaching assistant for help with technical problems related to Jupyter Lab or the course setup.",
     "crumbs": [
       "FAQs"
     ]
+  },
+  {
+    "objectID": "pages/03-R.html",
+    "href": "pages/03-R.html",
+    "title": "Setting up an R Project",
+    "section": "",
+    "text": "Download and Install R\n\nVisit CRAN and download R for your operating system.\nFollow the installation instructions.\n\nDownload and Install RStudio\n\nVisit RStudio Download and download RStudio Desktop.\nInstall RStudio after installing R.",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "pages/03-R.html#installing-r-and-rstudio",
+    "href": "pages/03-R.html#installing-r-and-rstudio",
+    "title": "Setting up an R Project",
+    "section": "",
+    "text": "Download and Install R\n\nVisit CRAN and download R for your operating system.\nFollow the installation instructions.\n\nDownload and Install RStudio\n\nVisit RStudio Download and download RStudio Desktop.\nInstall RStudio after installing R.",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "pages/03-R.html#creating-and-working-within-a-folder",
+    "href": "pages/03-R.html#creating-and-working-within-a-folder",
+    "title": "Setting up an R Project",
+    "section": "Creating and Working Within a Folder",
+    "text": "Creating and Working Within a Folder\n\nCreate a Project Folder\n\nIn RStudio, go to File &gt; New Project &gt; New Directory.\nName your folder (e.g., myproject) and choose a location.\nClick Create Project.\n\nSet Working Directory\n\nRStudio automatically sets the working directory to your project folder.\nTo check:\ngetwd()\nTo set manually:\nsetwd(\"/path/to/myproject\")",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "pages/03-R.html#bonus-using-renv-for-package-management",
+    "href": "pages/03-R.html#bonus-using-renv-for-package-management",
+    "title": "Setting up an R Project",
+    "section": "Bonus: Using renv for Package Management",
+    "text": "Bonus: Using renv for Package Management\n\nInitialize renv r     install.packages(\"renv\")     renv::init()\nCreate a DESCRIPTION File\n\nIn your project folder, create a file named DESCRIPTION with content like:\nPackage: myproject\nType: Project\nTitle: Example Project\nVersion: 0.1.0\nImports:\n      dplyr,\n      ggplot2\n\nInstall usethis and Use DESCRIPTION r     install.packages(\"usethis\")     usethis::use_description()\nInstall Packages from DESCRIPTION r     renv::install(\"dplyr\")     renv::install(\"ggplot2\")\nSnapshot the Environment r     renv::snapshot()\n\nThis workflow helps you organize your project, manage packages reproducibly, and share your setup with others.",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "pages/06-resources.html",
+    "href": "pages/06-resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Please see below for more resources on environment management and setting up reproducible data science projects:\n\nReproducible Data Science Project:\nUV: A more detailed tutorial on UV and its features, see here\nPixi: Pixi is another package manager, useful for conda packages. See here for a great tutorial."
   }
 ]

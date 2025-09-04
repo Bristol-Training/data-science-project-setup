@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Terminal Cheatsheet – Data Science Project Setup</title>
+<title>Initial Setup – Data Science Project Setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/04-FAQs.html" rel="next">
-<link href="../pages/02-R.html" rel="prev">
+<link href="../pages/02-python.html" rel="next">
+<link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -41,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a10154459f931fff05780d73d42d1199.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-879a5a930cb54ed00ab785b4a00eb2a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/03-terminal-cheatsheet.html">Terminal Cheatsheet</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/01-initial-setup.html">General Setup (Folders)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,25 +153,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/01-python.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/01-initial-setup.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">General Setup (Folders)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/02-python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/02-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/03-R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/03-terminal-cheatsheet.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pages/04-terminal-cheatsheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminal Cheatsheet</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/04-FAQs.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/05-FAQs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQs</span></a>
   </div>
 </li>
@@ -150,18 +191,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-a-terminal-or-command-prompt" id="toc-what-is-a-terminal-or-command-prompt" class="nav-link active" data-scroll-target="#what-is-a-terminal-or-command-prompt">What is a Terminal or Command Prompt?</a></li>
-  <li><a href="#basic-terminal-commands" id="toc-basic-terminal-commands" class="nav-link" data-scroll-target="#basic-terminal-commands">Basic Terminal Commands</a></li>
-  <li><a href="#why-use-terminal-commands" id="toc-why-use-terminal-commands" class="nav-link" data-scroll-target="#why-use-terminal-commands">Why Use Terminal Commands?</a></li>
+  <li><a href="#open-your-command-promptterminal" id="toc-open-your-command-promptterminal" class="nav-link active" data-scroll-target="#open-your-command-promptterminal">Open your Command Prompt/Terminal</a></li>
+  <li><a href="#creating-a-folder" id="toc-creating-a-folder" class="nav-link" data-scroll-target="#creating-a-folder">Creating a Folder</a></li>
+  <li><a href="#move-into-your-folder-changing-directory" id="toc-move-into-your-folder-changing-directory" class="nav-link" data-scroll-target="#move-into-your-folder-changing-directory">“Move Into” your Folder (Changing Directory)</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/03-terminal-cheatsheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/01-initial-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Terminal Cheatsheet</h1>
+<h1 class="title">Initial Setup</h1>
 </div>
 
 
@@ -178,77 +219,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-a-terminal-or-command-prompt" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-terminal-or-command-prompt">What is a Terminal or Command Prompt?</h2>
-<p>A <strong>terminal</strong> (also called a <strong>command prompt</strong> on Windows) is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.</p>
-<ul>
-<li><strong>Windows:</strong> The terminal is called <strong>Command Prompt</strong> or <strong>PowerShell</strong>.</li>
-<li><strong>Mac:</strong> The terminal app is called <strong>Terminal</strong>.</li>
-<li><strong>Linux:</strong> Most distributions include a <strong>Terminal</strong> application.</li>
-</ul>
+<p>Here we show you how to:</p>
+<ol type="1">
+<li>Open a Command Prompt (Windows) or Terminal (Mac/Linux)</li>
+<li>Create a folder</li>
+<li>“Move into” that folder</li>
+</ol>
+<p>If you already have a project created, simply skip the folder creation step, and move into the existing folder (We call this <strong>changing directory</strong>).</p>
+<section id="open-your-command-promptterminal" class="level2">
+<h2 class="anchored" data-anchor-id="open-your-command-promptterminal">Open your Command Prompt/Terminal</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Click the <strong>Start</strong> menu, search for <strong>Commant Prompt</strong>, and click to open. When you open the application you should will see a blinking that looks like this: cursor preceded by something like this:</p>
+<pre><code>C:\Users\abc1234&gt;</code></pre>
+<p>The text before the cursor indicates what folder you are “in”. For more information on basic command prompt commands, please see <a href="../pages/04-terminal-cheatsheet.html">here</a></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Click the <strong>Launchpad</strong> (rocket icon), type <strong>Terminal</strong>, and press <strong>Enter</strong> to open it. You should see a prompt that looks like:</p>
+<pre><code>abc1234@Macbook %</code></pre>
+<p>The text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command <code>pwd</code>, then click <strong>Enter</strong>.</p>
+<p>For more information on basic command prompt commands, please see <a href="../pages/04-terminal-cheatsheet.html">here</a>. Well done, you have opened the terminal!</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Open your terminal by pressing <strong>Ctrl+Alt+T</strong> or searching for <strong>Terminal</strong> in your applications menu. You should see a prompt similar to:</p>
+<pre><code>abc1234@Laptop:/</code></pre>
+<p>The text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command <code>pwd</code>, then click <strong>Enter</strong>.</p>
+<p>For more information on basic command prompt commands, please see <a href="../pages/04-terminal-cheatsheet.html">here</a>. Well done, you have opened the terminal!</p>
+</div>
+</div>
+</div>
 </section>
-<section id="basic-terminal-commands" class="level2">
-<h2 class="anchored" data-anchor-id="basic-terminal-commands">Basic Terminal Commands</h2>
-<p>Here are a few basic commands that work across most systems:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 18%">
-<col style="width: 21%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>Windows</th>
-<th>Mac/Linux</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>List files</td>
-<td><code>dir</code></td>
-<td><code>ls</code></td>
-<td>Shows files in the current folder</td>
-</tr>
-<tr class="even">
-<td>Change folder</td>
-<td><code>cd foldername</code></td>
-<td><code>cd foldername</code></td>
-<td>Move into a folder</td>
-</tr>
-<tr class="odd">
-<td>Go up a folder</td>
-<td><code>cd ..</code></td>
-<td><code>cd ..</code></td>
-<td>Move up one level</td>
-</tr>
-<tr class="even">
-<td>Make a folder</td>
-<td><code>mkdir name</code></td>
-<td><code>mkdir name</code></td>
-<td>Create a new folder</td>
-</tr>
-<tr class="odd">
-<td>Remove a file</td>
-<td><code>del file.txt</code></td>
-<td><code>rm file.txt</code></td>
-<td>Delete a file</td>
-</tr>
-</tbody>
-</table>
+<section id="creating-a-folder" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-folder">Creating a Folder</h2>
+<p>The commands to make a directory and navigate into it are the same for Windows, Mac, and Linux. To create a new folder and move into it, use the following commands in your Command Prompt/Terminal:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Press <strong>Enter</strong>.</p>
 </section>
-<section id="why-use-terminal-commands" class="level2">
-<h2 class="anchored" data-anchor-id="why-use-terminal-commands">Why Use Terminal Commands?</h2>
-<p>Using basic terminal commands makes it easier to:</p>
-<ul>
-<li><strong>Navigate projects:</strong> Quickly move between folders and files.</li>
-<li><strong>Run scripts:</strong> Start Python or R scripts directly.</li>
-<li><strong>Manage environments:</strong> Create and activate virtual environments for Python or R.</li>
-<li><strong>Automate tasks:</strong> Use simple commands to install packages, update code, or clean up files.</li>
-</ul>
-<p>Learning a few terminal commands helps you work more efficiently and gives you more control over your Python and R projects.</p>
+<section id="move-into-your-folder-changing-directory" class="level1">
+<h1>“Move Into” your Folder (Changing Directory)</h1>
+<p>To move into a folder (in this case named “my_project”), enter the following command:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my_project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>mkdir my_project</code> creates a folder named <code>my_project</code>. <code>cd my_project</code> changes into that folder. Any other project name could be used. For ease, it is better that the project names do not contain spaces, instead use <code>-</code> or <code>_</code>.</p>
+<p>If you type <code>pwd</code>, then press enter you will find yourself in the project folder. To leave that folder, and go one step up, you can enter the command <code>cd ..</code>.</p>
+<p><a href="../pages/02-python.html" class="btn btn-primary">Setup a Python Environment</a></p>
+<p><a href="../pages/03-R.html" class="btn btn-success">Setup an R Environment</a></p>
 
 
 </section>
@@ -655,13 +671,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/02-R.html" class="pagination-link" aria-label="R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">R</span>
+      <a href="../index.html" class="pagination-link" aria-label="Home">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/04-FAQs.html" class="pagination-link" aria-label="FAQs">
-        <span class="nav-page-text">FAQs</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/02-python.html" class="pagination-link" aria-label="Python">
+        <span class="nav-page-text">Python</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -669,11 +685,11 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
+<p>Content written by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/03-terminal-cheatsheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/01-initial-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
