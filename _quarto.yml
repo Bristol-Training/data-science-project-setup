@@ -16,21 +16,24 @@ website:
       - href: "index.qmd"
         text: "Home"
 
-      - href: "pages/01-python.qmd"
+      - href: "pages/01-initial-setup.qmd"
+        text: "General Setup (Folders)"
+
+      - href: "pages/02-python.qmd"
         text: "Python"
 
-      - href: "pages/02-R.qmd"
+      - href: "pages/03-R.qmd"
         text: "R"
 
-      - href: "pages/03-terminal-cheatsheet.qmd"
+      - href: "pages/04-terminal-cheatsheet.qmd"
         text: "Terminal Cheatsheet"
 
-      - href: "pages/04-FAQs.qmd"
+      - href: "pages/05-FAQs.qmd"
         text: "FAQs"
 
 
   page-footer:
-    left: "Course delivered by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/)<br>© [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)"
+    left: "Content written by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/)<br>© [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)"
 
   repo-url: https://github.com/bristol-training/data-science-project-setup
   repo-actions: [edit, issue]

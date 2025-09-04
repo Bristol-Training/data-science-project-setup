@@ -1,3 +1,8 @@
+---
+title: "Setting up an R Project"
+format: html
+---
+
 ## Installing R and RStudio
 
 1. **Download and Install R**  

@@ -1,0 +1,93 @@
+---
+title: "Initial Setup"
+format: html
+---
+
+Here we show you how to:
+
+1. Open a Command Prompt (Windows) or Terminal (Mac/Linux)
+2. Create a folder
+3. "Move into" that folder
+
+
+
+
+If you already have a project created, simply skip the folder
+creation step, and move into the existing folder (We call this
+**changing directory**). 
+
+## Open your Command Prompt/Terminal
+::: {.panel-tabset}
+
+### Windows
+
+Click the **Start** menu, search for **Commant Prompt**,
+ and click to open. When you open the application you should 
+ will see a blinking that looks like this: cursor preceded by 
+ something like this:
+
+```
+C:\Users\abc1234>
+```
+
+The text before the cursor indicates what folder you are "in". For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd)
+
+### Mac
+Click the **Launchpad** (rocket icon), type **Terminal**, and press **Enter** to open it. You should see a prompt that looks like:
+
+```
+abc1234@Macbook %
+```
+
+The text prior to the cursor has your user name and the a name for the computer. You are "in" the home directory. To see where this directory is located, type the command `pwd`, then click **Enter**. 
+
+For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd). Well done, you have opened the terminal! 
+
+### Linux
+
+Open your terminal by pressing **Ctrl+Alt+T** or searching for **Terminal** in your applications menu. You should see a prompt similar to:
+
+```
+abc1234@Laptop:/
+```
+
+The text prior to the cursor has your user name and the a name for the computer. You are "in" the home directory. To see where this directory is located, type the command `pwd`, then click **Enter**. 
+
+For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd). Well done, you have opened the terminal! 
+
+:::
+
+
+## Creating a Folder
+
+The commands to make a directory and navigate into
+it are the same for Windows, Mac, and Linux. To create a new folder
+and move into it, use the following commands in your 
+Command Prompt/Terminal:
+
+```bash
+mkdir my_project
+```
+
+Press **Enter**.
+
+# "Move Into" your Folder (Changing Directory)
+
+To move into a folder (in this case named "my_project"), enter
+the following command:
+
+```bash
+cd my_project
+```
+
+`mkdir my_project` creates a folder named `my_project`. `cd my_project` changes into that folder. Any other project name could 
+be used. For ease, it is better that the project names do not
+contain spaces, instead use `-` or `_`.
+
+If you type `pwd`, then press enter you will find yourself in the 
+project folder. To leave that folder, and go one step up, you can
+enter the command `cd ..`. 
+
+[Setup a Python Environment](./02-python.qmd){.btn .btn-primary}
+
+[Setup an R Environment](./03-R.qmd){.btn .btn-success}
