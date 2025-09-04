@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/01-initial-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">General Setup (Folders)</span></a>
+ <span class="menu-text">Initial Setup (All projects)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -226,12 +226,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Here we show you how to setup a python project. For most python projects, <a href="https://docs.astral.sh/uv/">uv</a> will be the best choice. For notes on when you may want to use other package managers, see <a href="../pages/05-FAQs.html#">here</a></p>
 <p>In the <a href="../pages/01-initial-setup.html">previous section</a>, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.</p>
+<p>No that you are in this folder, you will want to install all the tools you need for your code to run, and to do your research. Virtual environments, which we create here, are a great way to keep all the tools you need organized alongside your code and separate from other projects.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is a package manager?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A package manager is a tool that helps you install, update, and manage software libraries (called “packages”) for a programming language. Packages essentially contain chunks of code that you might find useful, that you don’t want to write yourself!</p>
+<p>For most python projects, <a href="https://docs.astral.sh/uv/">uv</a> will be a great choice. For notes on when you may want to use other package managers, see <a href="../pages/05-FAQs.html#">here</a></p>
+</div>
+</div>
+</div>
 <section id="install-package-manager" class="level2">
 <h2 class="anchored" data-anchor-id="install-package-manager">Install Package Manager</h2>
 <p>Package manager installation should only need to be done <strong>once</strong> on your computer.</p>
-<p>Instructions are included below. If you encounter any issues, see <a href="https://docs.astral.sh/uv/getting-started/installation/">here</a> for more installation methods to try. Or contact the JGI team</p>
+<p>Instructions are included below. If you encounter any issues, see <a href="https://docs.astral.sh/uv/getting-started/installation/">here</a> for more installation methods to try. Or contact the JGI team.</p>
 </section>
 <section id="install-uv" class="level2">
 <h2 class="anchored" data-anchor-id="install-uv">Install UV</h2>
@@ -256,13 +273,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="move-into-project-directory" class="level2">
 <h2 class="anchored" data-anchor-id="move-into-project-directory">Move into Project Directory</h2>
-<p>Firstly, it is essential to:</p>
+<p>To set up your Python environment, you need to be in your project directory. Follow these steps:</p>
 <ol type="1">
 <li>Open your Command Prompt/Terminal.</li>
 <li>Create or navigate to your project directory.</li>
 </ol>
-<p>If you have not done this, or it is not clear how to do so, please refer to the <a href="../pages/01-initial-setup.html">previous section</a>.</p>
-<p>To check you are in the correct directory, enter the following command</p>
+<p>If it is not clear how to do so, please refer to the <a href="../pages/01-initial-setup.html">previous section</a>.</p>
+<p>To check you are in the correct directory, enter the following command:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
@@ -281,12 +298,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="create-a-virtual-environment">Create a Virtual Environment</h3>
 <p>Enter the following command to create a minimal virtual environment:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init <span class="at">--bare</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will create a <code>pyproject.toml</code> file, which will record information on all of the packages you install in your virtual environment.</p>
 </section>
 <section id="install-packages" class="level3">
 <h3 class="anchored" data-anchor-id="install-packages">Install Packages</h3>
-<p>For all projects we need jupyterlab. This can be installed with:</p>
+<p>For all projects we need jupyterlab, this is where we edit code. This can be added to your project with this command:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add jupyterlab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For the “Introduction to Data Analysis in Python” course (see <a href="https://bristol-training.github.io/introduction-to-data-analysis-in-python/">here</a>), you would need the <code>pandas</code> and <code>seaborn</code> package. You can install this with:</p>
+<p>For the “Introduction to Data Analysis in Python” course (see <a href="https://bristol-training.github.io/introduction-to-data-analysis-in-python/">here</a>), you would need the <code>pandas</code> and <code>seaborn</code> package. You can add these with:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add pandas seaborn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Generally speaking, to add a package to your environment, you can use the following command:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="op">&lt;</span>package-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -726,8 +744,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/01-initial-setup.html" class="pagination-link" aria-label="General Setup (Folders)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">General Setup (Folders)</span>
+      <a href="../pages/01-initial-setup.html" class="pagination-link" aria-label="Initial Setup (All projects)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Initial Setup (All projects)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

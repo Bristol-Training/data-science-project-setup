@@ -44,9 +44,9 @@
     "href": "pages/01-initial-setup.html",
     "title": "Initial Setup",
     "section": "",
-    "text": "Here we show you how to:\nIf you already have a project created, simply skip the folder creation step, and move into the existing folder (We call this changing directory).",
+    "text": "Here we show you how to:\nAll the commands you need for these steps are included in this page. A cheatsheet is also available for quick reference.\nIf you already have a project folder created, simply skip the folder creation step, and move into the existing folder.",
     "crumbs": [
-      "General Setup (Folders)"
+      "Initial Setup (All projects)"
     ]
   },
   {
@@ -54,9 +54,9 @@
     "href": "pages/01-initial-setup.html#open-your-command-promptterminal",
     "title": "Initial Setup",
     "section": "Open your Command Prompt/Terminal",
-    "text": "Open your Command Prompt/Terminal\n\nWindowsMacLinux\n\n\nClick the Start menu, search for Commant Prompt, and click to open. When you open the application you should will see a blinking that looks like this: cursor preceded by something like this:\nC:\\Users\\abc1234&gt;\nThe text before the cursor indicates what folder you are “in”. For more information on basic command prompt commands, please see here\n\n\nClick the Launchpad (rocket icon), type Terminal, and press Enter to open it. You should see a prompt that looks like:\nabc1234@Macbook %\nThe text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command pwd, then click Enter.\nFor more information on basic command prompt commands, please see here. Well done, you have opened the terminal!\n\n\nOpen your terminal by pressing Ctrl+Alt+T or searching for Terminal in your applications menu. You should see a prompt similar to:\nabc1234@Laptop:/\nThe text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command pwd, then click Enter.\nFor more information on basic command prompt commands, please see here. Well done, you have opened the terminal!",
+    "text": "Open your Command Prompt/Terminal\n\nWindowsMacLinux\n\n\nClick the Start menu, search for Commant Prompt, and click to open. When you open the application you should will see a blinking that looks like this: cursor preceded by something like this:\nC:\\Users\\abc1234&gt;\nThe text before the cursor indicates what folder you are “in”.\n\n\nClick the Launchpad (rocket icon), type Terminal, and press Enter to open it. You should see a prompt that looks like:\nabc1234@Macbook %\nThe text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command pwd, then click Enter.\n\n\nOpen your terminal by pressing Ctrl+Alt+T or searching for Terminal in your applications menu. You should see a prompt similar to:\nabc1234@Laptop:/\nThe text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command pwd, then click Enter.\nFor more information on basic command prompt commands, please see here.",
     "crumbs": [
-      "General Setup (Folders)"
+      "Initial Setup (All projects)"
     ]
   },
   {
@@ -66,7 +66,7 @@
     "section": "Creating a Folder",
     "text": "Creating a Folder\nThe commands to make a directory and navigate into it are the same for Windows, Mac, and Linux. To create a new folder and move into it, use the following commands in your Command Prompt/Terminal:\nmkdir my_project\nPress Enter.",
     "crumbs": [
-      "General Setup (Folders)"
+      "Initial Setup (All projects)"
     ]
   },
   {
@@ -74,7 +74,7 @@
     "href": "pages/02-python.html",
     "title": "Python Environment Setup",
     "section": "",
-    "text": "Here we show you how to setup a python project. For most python projects, uv will be the best choice. For notes on when you may want to use other package managers, see here\nIn the previous section, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.",
+    "text": "In the previous section, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.\nNo that you are in this folder, you will want to install all the tools you need for your code to run, and to do your research. Virtual environments, which we create here, are a great way to keep all the tools you need organized alongside your code and separate from other projects.",
     "crumbs": [
       "Python"
     ]
@@ -84,7 +84,7 @@
     "href": "pages/02-python.html#install-package-manager",
     "title": "Python Environment Setup",
     "section": "Install Package Manager",
-    "text": "Install Package Manager\nPackage manager installation should only need to be done once on your computer.\nInstructions are included below. If you encounter any issues, see here for more installation methods to try. Or contact the JGI team",
+    "text": "Install Package Manager\nPackage manager installation should only need to be done once on your computer.\nInstructions are included below. If you encounter any issues, see here for more installation methods to try. Or contact the JGI team.",
     "crumbs": [
       "Python"
     ]
@@ -104,7 +104,7 @@
     "href": "pages/02-python.html#move-into-project-directory",
     "title": "Python Environment Setup",
     "section": "Move into Project Directory",
-    "text": "Move into Project Directory\nFirstly, it is essential to:\n\nOpen your Command Prompt/Terminal.\nCreate or navigate to your project directory.\n\nIf you have not done this, or it is not clear how to do so, please refer to the previous section.\nTo check you are in the correct directory, enter the following command\n\nWindowsMacLinux\n\n\ncd\n\n\npwd\n\n\npwd\n\n\n\n\nCreate a Virtual Environment\nEnter the following command to create a minimal virtual environment:\nuv init --bare\n\n\nInstall Packages\nFor all projects we need jupyterlab. This can be installed with:\nuv add jupyterlab\nFor the “Introduction to Data Analysis in Python” course (see here), you would need the pandas and seaborn package. You can install this with:\nuv add pandas seaborn\nGenerally speaking, to add a package to your environment, you can use the following command:\nuv add &lt;package-name&gt;\nReplace &lt;package-name&gt; with the name of the package you want to install.",
+    "text": "Move into Project Directory\nTo set up your Python environment, you need to be in your project directory. Follow these steps:\n\nOpen your Command Prompt/Terminal.\nCreate or navigate to your project directory.\n\nIf it is not clear how to do so, please refer to the previous section.\nTo check you are in the correct directory, enter the following command:\n\nWindowsMacLinux\n\n\ncd\n\n\npwd\n\n\npwd\n\n\n\n\nCreate a Virtual Environment\nEnter the following command to create a minimal virtual environment:\nuv init --bare\nThis will create a pyproject.toml file, which will record information on all of the packages you install in your virtual environment.\n\n\nInstall Packages\nFor all projects we need jupyterlab, this is where we edit code. This can be added to your project with this command:\nuv add jupyterlab\nFor the “Introduction to Data Analysis in Python” course (see here), you would need the pandas and seaborn package. You can add these with:\nuv add pandas seaborn\nGenerally speaking, to add a package to your environment, you can use the following command:\nuv add &lt;package-name&gt;\nReplace &lt;package-name&gt; with the name of the package you want to install.",
     "crumbs": [
       "Python"
     ]
@@ -144,7 +144,7 @@
     "href": "index.html",
     "title": "Project Setup Guidance",
     "section": "",
-    "text": "This site provides guidance for setting up data science projects for the training we deliver, but also more generally when you begin to use python or R in your own work.\nWe believe that the course we deliver should teach you programming concepts, but also should set you up for using these tools in your everyday work.\nMain Steps: Regardless of the language you are using, these are the key steps you need to follow when starting training, or creating a new data science project:\n\n\n\nProject Setup Diagram\n\n\nFor more specific instructions, see below:\n\nPython\nR\nSee here for a bit of a cheatsheet (some basics on using the terminal that you may find helpful)\nWhy do we do it like this? See here for FAQs\n\nThere are many approaches to setting up and using R/python, but we have used our experience in teaching and using these tools to come up with a project setup that is simple and flexible enough for anyone to use. If you have any suggestions, please feel free to make suggestions here.\nSee here for more resources on environment management and setting up reproducible data science projects",
+    "text": "This site provides guidance for setting up data science projects for the training we deliver, but also more generally when you begin to use python or R in your own work.\nWe believe that the course we deliver should teach you programming concepts, but also should set you up for using these tools in your everyday work.\nMain Steps: Regardless of the language you are using, these are the key steps you need to follow when starting training, or creating a new data science project:\n\n\n\nProject Setup Diagram\n\n\nTo start setup immediately, click the button below:\nGet Started](pages/01-initial-setup.qmd){.btn .btn-primary}\nThis guide also includes:\n\nA Terminal Cheatsheet goes through some basics on using the terminal that you may find helpful\nWhy do we do it like this? See the FAQs\n\nThere are many approaches to setting up and using R/python, but we have used our experience in teaching and using these tools to come up with a project setup that is simple and flexible enough for anyone to do reproducible research. If you have any suggestions, please feel free to make suggestion here.\nSee here for more resources on environment management and setting up reproducible data science projects",
     "crumbs": [
       "Home"
     ]
