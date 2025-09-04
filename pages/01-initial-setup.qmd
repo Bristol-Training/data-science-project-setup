@@ -7,14 +7,14 @@ Here we show you how to:
 
 1. Open a Command Prompt (Windows) or Terminal (Mac/Linux)
 2. Create a folder
-3. "Move into" that folder
+3. "Move into" that folder (change directory)
 
+All the commands you need for these steps are included in this 
+page. A [cheatsheet](./04-terminal-cheatsheet.qmd) is also 
+available for quick reference.
 
-
-
-If you already have a project created, simply skip the folder
-creation step, and move into the existing folder (We call this
-**changing directory**). 
+If you already have a project folder created, simply skip the folder
+creation step, and move into the existing folder.
 
 ## Open your Command Prompt/Terminal
 ::: {.panel-tabset}
@@ -30,7 +30,7 @@ Click the **Start** menu, search for **Commant Prompt**,
 C:\Users\abc1234>
 ```
 
-The text before the cursor indicates what folder you are "in". For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd)
+The text before the cursor indicates what folder you are "in". 
 
 ### Mac
 Click the **Launchpad** (rocket icon), type **Terminal**, and press **Enter** to open it. You should see a prompt that looks like:
@@ -40,8 +40,6 @@ abc1234@Macbook %
 ```
 
 The text prior to the cursor has your user name and the a name for the computer. You are "in" the home directory. To see where this directory is located, type the command `pwd`, then click **Enter**. 
-
-For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd). Well done, you have opened the terminal! 
 
 ### Linux
 
@@ -53,7 +51,7 @@ abc1234@Laptop:/
 
 The text prior to the cursor has your user name and the a name for the computer. You are "in" the home directory. To see where this directory is located, type the command `pwd`, then click **Enter**. 
 
-For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd). Well done, you have opened the terminal! 
+For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd). 
 
 :::
 
@@ -84,8 +82,9 @@ cd my_project
 be used. For ease, it is better that the project names do not
 contain spaces, instead use `-` or `_`.
 
-If you type `pwd`, then press enter you will find yourself in the 
-project folder. To leave that folder, and go one step up, you can
+In windows, type `cd` and press enter to see the current directory. For Mac/Linux type `pwd` and press enter to see the current directory. 
+
+To leave that folder, and go one step up, you can
 enter the command `cd ..`. 
 
 [Setup a Python Environment](./02-python.qmd){.btn .btn-primary}

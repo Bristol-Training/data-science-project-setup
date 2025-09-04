@@ -18,17 +18,18 @@ when starting training, or creating a new data science project:
 
 ![Project Setup Diagram](assets/workflow-setup.drawio.png)
 
-For more specific instructions, see below:
+To start setup immediately, click the button below:
 
-- [Python](./pages/02-python.qmd)
-- [R](./pages/03-R.qmd)
-- See [here](./pages/04-terminal-cheatsheet.qmd) for a bit of a cheatsheet (some basics on using the terminal that you may find helpful)
-- Why do we do it like this? See [here](./pages/05-FAQs.qmd) for FAQs 
+Get Started](pages/01-initial-setup.qmd){.btn .btn-primary}
+
+This guide also includes:
+
+- A [Terminal Cheatsheet](./pages/04-terminal-cheatsheet.qmd) goes through some basics on using the terminal that you may find helpful
+- Why do we do it like this? See the [FAQs](./pages/05-FAQs.qmd) 
 
 There are many approaches to setting up and using R/python, 
 but we have used our experience in teaching and using these 
-tools to come up with a project setup that is simple and flexible enough for anyone to use. If you have any suggestions, please feel free to make suggestions
-[here](https://github.com/Bristol-Training/data-science-project-setup/issues).
+tools to come up with a project setup that is simple and flexible enough for anyone to do reproducible research. If you have any suggestions, please feel free to [make suggestion here](https://github.com/Bristol-Training/data-science-project-setup/issues).
 
 See [here](./pages/06-resources.qmd) for more resources on environment
 management and setting up reproducible data science projects

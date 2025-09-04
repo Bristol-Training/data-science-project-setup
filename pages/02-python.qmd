@@ -3,20 +3,32 @@ title: "Python Environment Setup"
 format: html
 ---
 
-Here we show you how to setup a python project. For most
-python projects, [uv](https://docs.astral.sh/uv/) will be 
-the best choice. For notes on when you may want to use other package managers, see [here](./05-FAQs.qmd#)
-
 In the [previous section](./01-initial-setup.qmd), we showed you 
 how to open a terminal, create a folder, and move "into" the 
 folder. You will need to do this for every data science project.
+
+No that you are in this folder, you will want to install all
+the tools you need for your code to run, and to do your research.
+Virtual environments, which we create here, are a great way to keep 
+all the tools you need organized alongside your code and 
+separate from other projects.
+
+::: {.callout-tip collapse="true"}
+#### What is a package manager?
+
+A package manager is a tool that helps you install, update, and manage software libraries (called "packages") for a programming language. Packages essentially contain chunks of code that you might find useful,
+that you don't want to write yourself!
+
+For most python projects, [uv](https://docs.astral.sh/uv/) will be 
+a great choice. For notes on when you may want to use other package managers, see [here](./05-FAQs.qmd#)
+::: 
 
 ## Install Package Manager
 
 Package manager installation should only need
 to be done **once** on your computer.
 
-Instructions are included below. If you encounter any issues, see [here](https://docs.astral.sh/uv/getting-started/installation/) for more installation methods to try. Or contact the JGI team
+Instructions are included below. If you encounter any issues, see [here](https://docs.astral.sh/uv/getting-started/installation/) for more installation methods to try. Or contact the JGI team.
 
 ## Install UV
 
@@ -52,15 +64,15 @@ typing `uv --version`, then pressing enter. You may need to restart your Command
 
 ## Move into Project Directory
 
-Firstly, it is essential to:
+To set up your Python environment, you need to be in your project directory. Follow these steps:
 
 1. Open your Command Prompt/Terminal.
 2. Create or navigate to your project directory.
 
-If you have not done this, or it is not clear how to do so, please refer to the [previous section](./01-initial-setup.qmd).
+If it is not clear how to do so, please refer to the [previous section](./01-initial-setup.qmd).
 
 To check you are in the correct directory, enter the following
-command
+command:
 
 ::: {.panel-tabset}
 
@@ -89,15 +101,20 @@ Enter the following command to create a minimal virtual environment:
 uv init --bare
 ```
 
+This will create a `pyproject.toml` file, which will record information
+on all of the packages you install in your virtual environment.
+
 ### Install Packages
 
-For all projects we need jupyterlab. This can be installed with:
+For all projects we need jupyterlab, this is
+where we edit code. This can be added to your project 
+with this command:
 
 ```bash
 uv add jupyterlab
 ```
 
-For the "Introduction to Data Analysis in Python" course (see [here](https://bristol-training.github.io/introduction-to-data-analysis-in-python/)), you would need the `pandas` and `seaborn` package. You can install this with:
+For the "Introduction to Data Analysis in Python" course (see [here](https://bristol-training.github.io/introduction-to-data-analysis-in-python/)), you would need the `pandas` and `seaborn` package. You can add these with:
 
 ```bash
 uv add pandas seaborn
@@ -110,7 +127,6 @@ uv add <package-name>
 ```
 
 Replace `<package-name>` with the name of the package you want to install.
-
 
 ## Opening JupyterLab
 

@@ -17,7 +17,7 @@ website:
         text: "Home"
 
       - href: "pages/01-initial-setup.qmd"
-        text: "General Setup (Folders)"
+        text: "Initial Setup (All projects)"
 
       - href: "pages/02-python.qmd"
         text: "Python"
