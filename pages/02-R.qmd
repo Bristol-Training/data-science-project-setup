@@ -1,0 +1,70 @@
+## Installing R and RStudio
+
+1. **Download and Install R**  
+    - Visit [CRAN](https://cran.r-project.org/) and download R for your operating system.
+    - Follow the installation instructions.
+
+2. **Download and Install RStudio**  
+    - Visit [RStudio Download](https://posit.co/download/rstudio-desktop/) and download RStudio Desktop.
+    - Install RStudio after installing R.
+
+---
+
+## Creating and Working Within a Folder
+
+1. **Create a Project Folder**
+    - In RStudio, go to `File` > `New Project` > `New Directory`.
+    - Name your folder (e.g., `myproject`) and choose a location.
+    - Click `Create Project`.
+
+2. **Set Working Directory**
+    - RStudio automatically sets the working directory to your project folder.
+    - To check:  
+      ```r
+      getwd()
+      ```
+    - To set manually:  
+      ```r
+      setwd("/path/to/myproject")
+      ```
+
+---
+
+## Bonus: Using `renv` for Package Management
+
+1. **Initialize renv**
+    ```r
+    install.packages("renv")
+    renv::init()
+    ```
+
+2. **Create a DESCRIPTION File**
+    - In your project folder, create a file named `DESCRIPTION` with content like:
+      ```
+      Package: myproject
+      Type: Project
+      Title: Example Project
+      Version: 0.1.0
+      Imports:
+            dplyr,
+            ggplot2
+      ```
+
+3. **Install usethis and Use DESCRIPTION**
+    ```r
+    install.packages("usethis")
+    usethis::use_description()
+    ```
+
+4. **Install Packages from DESCRIPTION**
+    ```r
+    renv::install("dplyr")
+    renv::install("ggplot2")
+    ```
+
+5. **Snapshot the Environment**
+    ```r
+    renv::snapshot()
+    ```
+
+This workflow helps you organize your project, manage packages reproducibly, and share your setup with others.

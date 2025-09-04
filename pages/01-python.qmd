@@ -1,0 +1,68 @@
+---
+title: "Python Environment Setup"
+format: html
+---
+
+# Setting Up Your Python Environment
+
+To ensure a reproducible and isolated Python environment for your project, you can use either **UV** (recommended) or **Pixi** as your package manager.
+
+::: {.panel-tabset}
+
+## UV (Recommended)
+
+UV is a fast Python package manager and environment tool.
+
+1. **Install UV**  
+    If you don't have UV installed, run:
+    ```sh
+    curl -Ls https://github.com/astral-sh/uv/releases/latest/download/uv-installer.sh | sh
+    ```
+
+2. **Create a new environment**  
+    ```sh
+    uv venv .venv
+    ```
+
+3. **Activate the environment**  
+    ```sh
+    source .venv/bin/activate
+    ```
+
+4. **Install packages**  
+    For example, to install numpy and pandas:
+    ```sh
+    uv pip install numpy pandas
+    ```
+
+5. **Freeze dependencies**  
+    ```sh
+    uv pip freeze > requirements.txt
+    ```
+
+## Pixi
+
+Pixi is a cross-platform package manager for Python and other languages.
+
+1. **Install Pixi**  
+    ```sh
+    curl -fsSL https://pixi.sh/install.sh | bash
+    ```
+
+2. **Initialize a new project**  
+    ```sh
+    pixi init
+    ```
+
+3. **Add dependencies**  
+    For example, to add numpy and pandas:
+    ```sh
+    pixi add numpy pandas
+    ```
+
+4. **Activate the environment**  
+    ```sh
+    pixi shell
+    ```
+
+:::

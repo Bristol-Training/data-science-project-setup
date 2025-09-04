@@ -1,0 +1,35 @@
+---
+title: "Terminal Cheatsheet"
+format: html
+---
+
+## What is a Terminal or Command Prompt?
+
+A **terminal** (also called a **command prompt** on Windows) is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.
+
+- **Windows:** The terminal is called **Command Prompt** or **PowerShell**.
+- **Mac:** The terminal app is called **Terminal**.
+- **Linux:** Most distributions include a **Terminal** application.
+
+## Basic Terminal Commands
+
+Here are a few basic commands that work across most systems:
+
+| Command         | Windows         | Mac/Linux         | Description                       |
+|-----------------|----------------|-------------------|-----------------------------------|
+| List files      | `dir`           | `ls`              | Shows files in the current folder |
+| Change folder   | `cd foldername` | `cd foldername`   | Move into a folder                |
+| Go up a folder  | `cd ..`         | `cd ..`           | Move up one level                 |
+| Make a folder   | `mkdir name`    | `mkdir name`      | Create a new folder               |
+| Remove a file   | `del file.txt`  | `rm file.txt`     | Delete a file                     |
+
+## Why Use Terminal Commands?
+
+Using basic terminal commands makes it easier to:
+
+- **Navigate projects:** Quickly move between folders and files.
+- **Run scripts:** Start Python or R scripts directly.
+- **Manage environments:** Create and activate virtual environments for Python or R.
+- **Automate tasks:** Use simple commands to install packages, update code, or clean up files.
+
+Learning a few terminal commands helps you work more efficiently and gives you more control over your Python and R projects.

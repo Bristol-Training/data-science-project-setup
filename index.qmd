@@ -1,0 +1,18 @@
+---
+title: "Project Setup Guidance"
+
+format: html
+---
+
+# Welcome to Project Setup Guidance
+
+This site provides comprehensive materials for setting up data science projects, tailored for both course delivery and general use. Whether you're working with **Python** or **R**, you'll find step-by-step instructions and best practices to help you start your project efficiently.
+
+## What You'll Find Here
+
+- Guidance for setting up Python projects
+- Guidance for setting up R projects
+- General advice for organizing data science projects
+- Resources and templates for reproducible workflows
+
+Explore the sections to get started with your preferred language and learn how to structure your projects for success!

@@ -1,0 +1,28 @@
+---
+title: Frequently Asked Questions (FAQs)
+format: html
+---
+
+# Frequently Asked Questions
+
+## Why do we use Jupyter Lab instead of VS Code?
+
+We use **Jupyter Lab** as our primary IDE because it provides a simple and focused environment for learning. Unlike VS Code, Jupyter Lab does not require extensions or additional setup, and it does not include AI support or advanced features that may distract beginners. Our goal is to help students concentrate on core programming concepts without unnecessary complexity.
+
+## Can I use other IDEs for my assignments?
+
+While you are free to experiment with other IDEs on your own, all official coursework and assignments should be completed using Jupyter Lab to ensure consistency and compatibility.
+
+## Do I need to install any extensions for Jupyter Lab?
+
+No extensions are required. Jupyter Lab works out of the box for our course needs.
+
+## Is there AI assistance available in Jupyter Lab?
+
+No, Jupyter Lab does not include built-in AI support. This helps you develop your own problem-solving skills.
+
+## Who can I contact if I have technical issues?
+
+Please reach out to your instructor or teaching assistant for help with technical problems related to Jupyter Lab or the course setup.
+
+---

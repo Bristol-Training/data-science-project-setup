@@ -1,0 +1,13 @@
+[workspace]
+authors = ["l-gorman <leo.gorman@bristol.ac.uk>"]
+channels = ["conda-forge"]
+name = "project-setup"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+preview = "quarto preview"
+
+[dependencies]
+r-base = ">=4.5.1,<4.6"
+quarto = ">=1.7.33,<2"
