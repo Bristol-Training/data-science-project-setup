@@ -19,7 +19,7 @@ jobs:
                     echo "$HOME/.pixi/bin" >> $GITHUB_PATH
 
             - name: Build Quarto site
-              run: pixi run preview
+              run: pixi run build
 
             - name: Deploy to pages branch
               uses: peaceiris/actions-gh-pages@v4
