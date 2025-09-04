@@ -27,9 +27,7 @@ For more specific instructions, see below:
 
 There are many approaches to setting up and using R/python, 
 but we have used our experience in teaching and using these 
-tools to come up with a project setup that has a balance 
-of simplicity but also use for reproducible research. If you
-have any suggestions, please feel free to make suggestions
+tools to come up with a project setup that is simple and flexible enough for anyone to use. If you have any suggestions, please feel free to make suggestions
 [here](https://github.com/Bristol-Training/data-science-project-setup/issues).
 
 See [here](./pages/06-resources.qmd) for more resources on environment

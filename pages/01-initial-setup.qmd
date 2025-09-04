@@ -26,7 +26,7 @@ Click the **Start** menu, search for **Commant Prompt**,
  will see a blinking that looks like this: cursor preceded by 
  something like this:
 
-```
+```bat
 C:\Users\abc1234>
 ```
 
@@ -35,7 +35,7 @@ The text before the cursor indicates what folder you are "in". For more informat
 ### Mac
 Click the **Launchpad** (rocket icon), type **Terminal**, and press **Enter** to open it. You should see a prompt that looks like:
 
-```
+```bash
 abc1234@Macbook %
 ```
 
@@ -47,7 +47,7 @@ For more information on basic command prompt commands, please see [here](./04-te
 
 Open your terminal by pressing **Ctrl+Alt+T** or searching for **Terminal** in your applications menu. You should see a prompt similar to:
 
-```
+```bash
 abc1234@Laptop:/
 ```
 
