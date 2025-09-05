@@ -3,11 +3,17 @@ title: "Terminal Cheatsheet"
 format: html
 ---
 
-## What is a Terminal or Command Prompt?
+## What is a Terminal?
 
-A **terminal** (also called a **command prompt** on Windows) is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.
 
-- **Windows:** The terminal is called **Command Prompt** or **PowerShell**.
+
+A **terminal** is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.
+
+::: {.callout-note}
+On Windows, the program used to run terminal commands is called **Command Prompt**.
+:::
+
+- **Windows:** The terminal program is called **Command Prompt**. There is also Powershell, a more modern alternative (which has some different commands).
 - **Mac:** The terminal app is called **Terminal**.
 - **Linux:** Most distributions include a **Terminal** application.
 

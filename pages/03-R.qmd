@@ -3,73 +3,106 @@ title: "Setting up an R Project"
 format: html
 ---
 
-## Installing R and RStudio
+We recommend using Rstudio to work with R. Rstudio is an IDE (integrated development environment) that makes it easier to write and run R code. R itself is a powerful programming language for statistical computing and graphics. R needs to be downloaded
+first, then RStudio.
 
-1. **Download and Install R**  
+
+1. **Download and Install R**:
     - Visit [CRAN](https://cran.r-project.org/) and download R for your operating system.
     - Follow the installation instructions.
 
-2. **Download and Install RStudio**  
-    - Visit [RStudio Download](https://posit.co/download/rstudio-desktop/) and download RStudio Desktop.
-    - Install RStudio after installing R.
-
----
+2. **Download and Install RStudio**: Visit [RStudio Download](https://posit.co/download/rstudio-desktop/) and download RStudio Desktop.
 
 ## Creating and Working Within a Folder
 
-1. **Create a Project Folder**
+
+**Create a Project Folder**
     - In RStudio, go to `File` > `New Project` > `New Directory`.
     - Name your folder (e.g., `myproject`) and choose a location.
     - Click `Create Project`.
 
+
 2. **Set Working Directory**
-    - RStudio automatically sets the working directory to your project folder.
-    - To check:  
-      ```r
-      getwd()
-      ```
-    - To set manually:  
-      ```r
-      setwd("/path/to/myproject")
-      ```
+
+RStudio automatically sets the working directory to your project folder, but just to make sure, type the following into the console, and press enter:  
+```r
+getwd()
+```
+   
+To set manually:  
+```r
+setwd("/path/to/myproject")
+```
+
+Your Rstudio window should look as follows:
+
+![RStudio Window](../assets/Rstudio.png)
+
+The console, shown in this window, is where you can type R commands and see the output immediately. This is good for interactive work, quick tests, and project setup. Simply type the R command you want to execute, and press enter to run it.
 
 ---
 
-## Bonus: Using `renv` for Package Management
+## Installing and Managing Packages
 
-1. **Initialize renv**
+For package installation, you can use the `install.packages()` function. For example, to install the `ggplot2` package, you would run:
+
+```r
+install.packages("ggplot2")
+```
+
+You can install multiple packages at once by passing a character vector to `install.packages()`. For example:
+
+```r
+install.packages(c("ggplot2", "dplyr", "tidyr"))
+```
+
+
+::: {.callout-tip collapse="true"}
+## Bonus: Reproducible Environments in R (Not necessary, but encouraged!)
+
+Many people simply use the "install.packages()" function to install packages, but this does not ensure reproducibility. Instead, we recommend using the `renv` package to manage your R packages and their versions, and the DESCRIPTION file approach to record which packages you've installed. To install `renv`, run:
+
+```r
+install.packages("renv")
+```
+
+We also recommend installing the `usethis` package to help manage your project. `usethis includes great functionality for creating 
+R-projects which follow standards.
+
+```r
+install.packages("usethis")
+```
+
+
+### Initialise Environment
+
+1. **Initialize renv**: This creates a new project environment. Essentially a folder where project specific packages are installed, a document that tracks the packages used in the project, and a way to reproduce the environment later.
+
     ```r
-    install.packages("renv")
     renv::init()
     ```
 
-2. **Create a DESCRIPTION File**
-    - In your project folder, create a file named `DESCRIPTION` with content like:
-      ```
-      Package: myproject
-      Type: Project
-      Title: Example Project
-      Version: 0.1.0
-      Imports:
-            dplyr,
-            ggplot2
-      ```
+2. **Create a DESCRIPTION File**: This is a standard file in 
+R that contains metadata about your project. The document created by `renv` contains a really long list of all packages used in the project, and the packages that those packages depend on! The DESCRIPTION file contains just a list of the packages you installed, making it easier for people to see what you've done. The template can easily be created using this command
 
-3. **Install usethis and Use DESCRIPTION**
     ```r
-    install.packages("usethis")
-    usethis::use_description()
+    usethis::use_description(check_name = FALSE)
     ```
 
-4. **Install Packages from DESCRIPTION**
+
+3. **Install Packages from and add them to the description**
+
     ```r
-    renv::install("dplyr")
-    renv::install("ggplot2")
+    usethis::use_package("ggplot2")
     ```
 
-5. **Snapshot the Environment**
+5. **Snapshot the Environment**: After you've installed all your packages and added them to the DESCRIPTION file, you can create a snapshot of your environment. This will record the exact versions of all packages used in your project.
+
     ```r
     renv::snapshot()
     ```
 
 This workflow helps you organize your project, manage packages reproducibly, and share your setup with others.
+
+
+:::

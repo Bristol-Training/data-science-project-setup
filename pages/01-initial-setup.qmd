@@ -3,9 +3,12 @@ title: "Initial Setup"
 format: html
 ---
 
+
+
+
 Here we show you how to:
 
-1. Open a Command Prompt (Windows) or Terminal (Mac/Linux)
+1. Open a Terminal
 2. Create a folder
 3. "Move into" that folder (change directory)
 
@@ -16,21 +19,26 @@ available for quick reference.
 If you already have a project folder created, simply skip the folder
 creation step, and move into the existing folder.
 
-## Open your Command Prompt/Terminal
+## Open your Terminal
 ::: {.panel-tabset}
 
 ### Windows
 
 Click the **Start** menu, search for **Commant Prompt**,
  and click to open. When you open the application you should 
- will see a blinking that looks like this: cursor preceded by 
- something like this:
+see a blinking cursor preceded by 
+something like this:
 
 ```bat
 C:\Users\abc1234>
 ```
 
 The text before the cursor indicates what folder you are "in". 
+
+::: {.callout-note}
+On Windows, the program used to run terminal commands is called **Command Prompt**.
+:::
+
 
 ### Mac
 Click the **Launchpad** (rocket icon), type **Terminal**, and press **Enter** to open it. You should see a prompt that looks like:
@@ -49,9 +57,8 @@ Open your terminal by pressing **Ctrl+Alt+T** or searching for **Terminal** in y
 abc1234@Laptop:/
 ```
 
-The text prior to the cursor has your user name and the a name for the computer. You are "in" the home directory. To see where this directory is located, type the command `pwd`, then click **Enter**. 
+The text prior to the cursor has your user name and the a name for the computer. You are "in" the home directory. To see where this directory is located, type the command `pwd`, then click **Enter**.  
 
-For more information on basic command prompt commands, please see [here](./04-terminal-cheatsheet.qmd). 
 
 :::
 

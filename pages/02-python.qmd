@@ -7,7 +7,7 @@ In the [previous section](./01-initial-setup.qmd), we showed you
 how to open a terminal, create a folder, and move "into" the 
 folder. You will need to do this for every data science project.
 
-No that you are in this folder, you will want to install all
+Now that you are in this folder, you will want to install all
 the tools you need for your code to run, and to do your research.
 Virtual environments, which we create here, are a great way to keep 
 all the tools you need organized alongside your code and 
@@ -20,7 +20,7 @@ A package manager is a tool that helps you install, update, and manage software 
 that you don't want to write yourself!
 
 For most python projects, [uv](https://docs.astral.sh/uv/) will be 
-a great choice. For notes on when you may want to use other package managers, see [here](./05-FAQs.qmd#)
+a great choice of package manager. For notes on when you may want to use other package managers, see [here](./05-FAQs.qmd#)
 ::: 
 
 ## Install Package Manager
@@ -36,7 +36,7 @@ Instructions are included below. If you encounter any issues, see [here](https:/
 
 ### Windows
 
-Open Command Prompt and run:
+Open your terminal and run:
 
 ```bat
 winget install astral-uv.uv
@@ -60,13 +60,13 @@ curl -Ls https://astral.sh/uv/install.sh | bash
 :::
 
 After installation, check that uv is available by 
-typing `uv --version`, then pressing enter. You may need to restart your Command Prompt/Terminal for the changes to take effect.
+typing `uv --version`, then pressing enter. You may need to restart your terminal for the changes to take effect.
 
 ## Move into Project Directory
 
 To set up your Python environment, you need to be in your project directory. Follow these steps:
 
-1. Open your Command Prompt/Terminal.
+1. Open your terminal.
 2. Create or navigate to your project directory.
 
 If it is not clear how to do so, please refer to the [previous section](./01-initial-setup.qmd).

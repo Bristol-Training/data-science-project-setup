@@ -7,11 +7,9 @@ format: html
 
 This site provides guidance for setting up data science projects 
 for the training we deliver, but also more generally when you 
-begin to use `python` or `R` in your own work. 
-
-We believe that the course we deliver should teach you programming
+begin to use `python` or `R` in your own work. We believe that the courses we deliver should teach you programming
 concepts, but also should set you up for using these 
-tools in your everyday work.
+tools for your research.
 
 **Main Steps**: Regardless of the language you are using, these are the key steps you need to follow
 when starting training, or creating a new data science project:

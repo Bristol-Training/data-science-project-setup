@@ -3,34 +3,41 @@ title: Frequently Asked Questions (FAQs)
 format: html
 ---
 
-# Frequently Asked Questions
-
 ## Why do I need to use a virtual environment?
 
 Virtual environments help isolate your project’s dependencies from the rest of your system, ensuring that everyone working on the project uses the same package versions. This is essential for reproducible research, as it allows others to recreate your software environment and obtain the same results. Using a virtual environment also prevents conflicts between packages required for different projects.
 
-## Why does every project need to be in a seperate folder?
+## Why does every project need to be in a separate folder?
+
+Each project should be in its own folder to keep its files organized and separate from other projects. As a researcher, you will likely have a number of different projects, possibly each using different data/methods. Having different folders makes it easier to manage dependencies, avoid conflicts, and share the project with others. When using version control systems like Git, having a dedicated folder for each project simplifies tracking changes and collaborating with others.
 
 ## I've heard of other package managers in python (conda, pip, uv, pixi), which one should I use and when?
 
+Conda and Pip are the two most commonly used package managers in Python. Conda is often used for packages which have more complex dependencies, while Pip is the standard package manager for Python.
+Often, packages can be installed using either, but some packages may only be available through one of the package managers.
+
+UV is a newer package manager in the "Pip World", while Pixi is
+a newer package manager in the Conda world. We like using them a
+little more than we like using Pip and Conda, that's why we've 
+recommended them here! For more details on their features, please
+see our [resources page](./06-resources.qmd)
 
 ## Why do we use Jupyter Lab instead of VS Code?
 
 We use **Jupyter Lab** as our primary IDE because it provides a simple and focused environment for learning. Unlike VS Code, Jupyter Lab does not require extensions or additional setup, and it does not include AI support or advanced features that may distract beginners. Our goal is to help students concentrate on core programming concepts without unnecessary complexity.
 
-## Can I use other IDEs for my assignments?
+## Can I use other IDEs for my training?
 
 While you are free to experiment with other IDEs on your own, we 
-recommend using jupyter lab while you follow along with our courses.
+recommend using jupyter lab while you follow along with our courses
+It will be easier for us to help you when something goes wrong, if
+we know the setup you are working with!
 
 ## Do I need to install any extensions for Jupyter Lab?
 
 No extensions are required. Jupyter Lab works out of the box for our course needs.
 
-
-
 ## Who can I contact if I have technical issues?
 
 Please reach out to your instructor or teaching assistant for help with technical problems related to Jupyter Lab or the course setup.
 
----
