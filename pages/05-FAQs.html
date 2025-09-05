@@ -155,16 +155,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#frequently-asked-questions" id="toc-frequently-asked-questions" class="nav-link active" data-scroll-target="#frequently-asked-questions">Frequently Asked Questions</a>
-  <ul class="collapse">
-  <li><a href="#why-do-i-need-to-use-a-virtual-environment" id="toc-why-do-i-need-to-use-a-virtual-environment" class="nav-link" data-scroll-target="#why-do-i-need-to-use-a-virtual-environment">Why do I need to use a virtual environment?</a></li>
-  <li><a href="#why-does-every-project-need-to-be-in-a-seperate-folder" id="toc-why-does-every-project-need-to-be-in-a-seperate-folder" class="nav-link" data-scroll-target="#why-does-every-project-need-to-be-in-a-seperate-folder">Why does every project need to be in a seperate folder?</a></li>
+  <li><a href="#why-do-i-need-to-use-a-virtual-environment" id="toc-why-do-i-need-to-use-a-virtual-environment" class="nav-link active" data-scroll-target="#why-do-i-need-to-use-a-virtual-environment">Why do I need to use a virtual environment?</a></li>
+  <li><a href="#why-does-every-project-need-to-be-in-a-separate-folder" id="toc-why-does-every-project-need-to-be-in-a-separate-folder" class="nav-link" data-scroll-target="#why-does-every-project-need-to-be-in-a-separate-folder">Why does every project need to be in a separate folder?</a></li>
   <li><a href="#ive-heard-of-other-package-managers-in-python-conda-pip-uv-pixi-which-one-should-i-use-and-when" id="toc-ive-heard-of-other-package-managers-in-python-conda-pip-uv-pixi-which-one-should-i-use-and-when" class="nav-link" data-scroll-target="#ive-heard-of-other-package-managers-in-python-conda-pip-uv-pixi-which-one-should-i-use-and-when">I’ve heard of other package managers in python (conda, pip, uv, pixi), which one should I use and when?</a></li>
   <li><a href="#why-do-we-use-jupyter-lab-instead-of-vs-code" id="toc-why-do-we-use-jupyter-lab-instead-of-vs-code" class="nav-link" data-scroll-target="#why-do-we-use-jupyter-lab-instead-of-vs-code">Why do we use Jupyter Lab instead of VS Code?</a></li>
-  <li><a href="#can-i-use-other-ides-for-my-assignments" id="toc-can-i-use-other-ides-for-my-assignments" class="nav-link" data-scroll-target="#can-i-use-other-ides-for-my-assignments">Can I use other IDEs for my assignments?</a></li>
+  <li><a href="#can-i-use-other-ides-for-my-training" id="toc-can-i-use-other-ides-for-my-training" class="nav-link" data-scroll-target="#can-i-use-other-ides-for-my-training">Can I use other IDEs for my training?</a></li>
   <li><a href="#do-i-need-to-install-any-extensions-for-jupyter-lab" id="toc-do-i-need-to-install-any-extensions-for-jupyter-lab" class="nav-link" data-scroll-target="#do-i-need-to-install-any-extensions-for-jupyter-lab">Do I need to install any extensions for Jupyter Lab?</a></li>
   <li><a href="#who-can-i-contact-if-i-have-technical-issues" id="toc-who-can-i-contact-if-i-have-technical-issues" class="nav-link" data-scroll-target="#who-can-i-contact-if-i-have-technical-issues">Who can I contact if I have technical issues?</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/05-FAQs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -190,25 +187,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="frequently-asked-questions" class="level1">
-<h1>Frequently Asked Questions</h1>
 <section id="why-do-i-need-to-use-a-virtual-environment" class="level2">
 <h2 class="anchored" data-anchor-id="why-do-i-need-to-use-a-virtual-environment">Why do I need to use a virtual environment?</h2>
 <p>Virtual environments help isolate your project’s dependencies from the rest of your system, ensuring that everyone working on the project uses the same package versions. This is essential for reproducible research, as it allows others to recreate your software environment and obtain the same results. Using a virtual environment also prevents conflicts between packages required for different projects.</p>
 </section>
-<section id="why-does-every-project-need-to-be-in-a-seperate-folder" class="level2">
-<h2 class="anchored" data-anchor-id="why-does-every-project-need-to-be-in-a-seperate-folder">Why does every project need to be in a seperate folder?</h2>
+<section id="why-does-every-project-need-to-be-in-a-separate-folder" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-every-project-need-to-be-in-a-separate-folder">Why does every project need to be in a separate folder?</h2>
+<p>Each project should be in its own folder to keep its files organized and separate from other projects. As a researcher, you will likely have a number of different projects, possibly each using different data/methods. Having different folders makes it easier to manage dependencies, avoid conflicts, and share the project with others. When using version control systems like Git, having a dedicated folder for each project simplifies tracking changes and collaborating with others.</p>
 </section>
 <section id="ive-heard-of-other-package-managers-in-python-conda-pip-uv-pixi-which-one-should-i-use-and-when" class="level2">
 <h2 class="anchored" data-anchor-id="ive-heard-of-other-package-managers-in-python-conda-pip-uv-pixi-which-one-should-i-use-and-when">I’ve heard of other package managers in python (conda, pip, uv, pixi), which one should I use and when?</h2>
+<p>Conda and Pip are the two most commonly used package managers in Python. Conda is often used for packages which have more complex dependencies, while Pip is the standard package manager for Python. Often, packages can be installed using either, but some packages may only be available through one of the package managers.</p>
+<p>UV is a newer package manager in the “Pip World”, while Pixi is a newer package manager in the Conda world. We like using them a little more than we like using Pip and Conda, that’s why we’ve recommended them here! For more details on their features, please see our <a href="../pages/06-resources.html">resources page</a></p>
 </section>
 <section id="why-do-we-use-jupyter-lab-instead-of-vs-code" class="level2">
 <h2 class="anchored" data-anchor-id="why-do-we-use-jupyter-lab-instead-of-vs-code">Why do we use Jupyter Lab instead of VS Code?</h2>
 <p>We use <strong>Jupyter Lab</strong> as our primary IDE because it provides a simple and focused environment for learning. Unlike VS Code, Jupyter Lab does not require extensions or additional setup, and it does not include AI support or advanced features that may distract beginners. Our goal is to help students concentrate on core programming concepts without unnecessary complexity.</p>
 </section>
-<section id="can-i-use-other-ides-for-my-assignments" class="level2">
-<h2 class="anchored" data-anchor-id="can-i-use-other-ides-for-my-assignments">Can I use other IDEs for my assignments?</h2>
-<p>While you are free to experiment with other IDEs on your own, we recommend using jupyter lab while you follow along with our courses.</p>
+<section id="can-i-use-other-ides-for-my-training" class="level2">
+<h2 class="anchored" data-anchor-id="can-i-use-other-ides-for-my-training">Can I use other IDEs for my training?</h2>
+<p>While you are free to experiment with other IDEs on your own, we recommend using jupyter lab while you follow along with our courses It will be easier for us to help you when something goes wrong, if we know the setup you are working with!</p>
 </section>
 <section id="do-i-need-to-install-any-extensions-for-jupyter-lab" class="level2">
 <h2 class="anchored" data-anchor-id="do-i-need-to-install-any-extensions-for-jupyter-lab">Do I need to install any extensions for Jupyter Lab?</h2>
@@ -217,10 +215,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="who-can-i-contact-if-i-have-technical-issues" class="level2">
 <h2 class="anchored" data-anchor-id="who-can-i-contact-if-i-have-technical-issues">Who can I contact if I have technical issues?</h2>
 <p>Please reach out to your instructor or teaching assistant for help with technical problems related to Jupyter Lab or the course setup.</p>
-<hr>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

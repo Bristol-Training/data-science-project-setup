@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#open-your-command-promptterminal" id="toc-open-your-command-promptterminal" class="nav-link active" data-scroll-target="#open-your-command-promptterminal">Open your Command Prompt/Terminal</a></li>
+  <li><a href="#open-your-terminal" id="toc-open-your-terminal" class="nav-link active" data-scroll-target="#open-your-terminal">Open your Terminal</a></li>
   <li><a href="#creating-a-folder" id="toc-creating-a-folder" class="nav-link" data-scroll-target="#creating-a-folder">Creating a Folder</a></li>
   <li><a href="#move-into-your-folder-changing-directory" id="toc-move-into-your-folder-changing-directory" class="nav-link" data-scroll-target="#move-into-your-folder-changing-directory">“Move Into” your Folder (Changing Directory)</a></li>
   </ul>
@@ -221,21 +221,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Here we show you how to:</p>
 <ol type="1">
-<li>Open a Command Prompt (Windows) or Terminal (Mac/Linux)</li>
+<li>Open a Terminal</li>
 <li>Create a folder</li>
 <li>“Move into” that folder (change directory)</li>
 </ol>
 <p>All the commands you need for these steps are included in this page. A <a href="../pages/04-terminal-cheatsheet.html">cheatsheet</a> is also available for quick reference.</p>
 <p>If you already have a project folder created, simply skip the folder creation step, and move into the existing folder.</p>
-<section id="open-your-command-promptterminal" class="level2">
-<h2 class="anchored" data-anchor-id="open-your-command-promptterminal">Open your Command Prompt/Terminal</h2>
+<section id="open-your-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="open-your-terminal">Open your Terminal</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Click the <strong>Start</strong> menu, search for <strong>Commant Prompt</strong>, and click to open. When you open the application you should will see a blinking that looks like this: cursor preceded by something like this:</p>
+<p>Click the <strong>Start</strong> menu, search for <strong>Commant Prompt</strong>, and click to open. When you open the application you should see a blinking cursor preceded by something like this:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bat code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>C:\Users\abc1234<span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The text before the cursor indicates what folder you are “in”.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On Windows, the program used to run terminal commands is called <strong>Command Prompt</strong>.</p>
+</div>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Click the <strong>Launchpad</strong> (rocket icon), type <strong>Terminal</strong>, and press <strong>Enter</strong> to open it. You should see a prompt that looks like:</p>
@@ -246,7 +259,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Open your terminal by pressing <strong>Ctrl+Alt+T</strong> or searching for <strong>Terminal</strong> in your applications menu. You should see a prompt similar to:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">abc1234@Laptop:/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The text prior to the cursor has your user name and the a name for the computer. You are “in” the home directory. To see where this directory is located, type the command <code>pwd</code>, then click <strong>Enter</strong>.</p>
-<p>For more information on basic command prompt commands, please see <a href="../pages/04-terminal-cheatsheet.html">here</a>.</p>
 </div>
 </div>
 </div>

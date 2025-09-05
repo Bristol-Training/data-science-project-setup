@@ -191,9 +191,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installing-r-and-rstudio" id="toc-installing-r-and-rstudio" class="nav-link active" data-scroll-target="#installing-r-and-rstudio">Installing R and RStudio</a></li>
-  <li><a href="#creating-and-working-within-a-folder" id="toc-creating-and-working-within-a-folder" class="nav-link" data-scroll-target="#creating-and-working-within-a-folder">Creating and Working Within a Folder</a></li>
-  <li><a href="#bonus-using-renv-for-package-management" id="toc-bonus-using-renv-for-package-management" class="nav-link" data-scroll-target="#bonus-using-renv-for-package-management">Bonus: Using <code>renv</code> for Package Management</a></li>
+  <li><a href="#creating-and-working-within-a-folder" id="toc-creating-and-working-within-a-folder" class="nav-link active" data-scroll-target="#creating-and-working-within-a-folder">Creating and Working Within a Folder</a></li>
+  <li><a href="#installing-and-managing-packages" id="toc-installing-and-managing-packages" class="nav-link" data-scroll-target="#installing-and-managing-packages">Installing and Managing Packages</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/03-R.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -219,62 +218,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="installing-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="installing-r-and-rstudio">Installing R and RStudio</h2>
+<p>We recommend using Rstudio to work with R. Rstudio is an IDE (integrated development environment) that makes it easier to write and run R code. R itself is a powerful programming language for statistical computing and graphics. R needs to be downloaded first, then RStudio.</p>
 <ol type="1">
-<li><strong>Download and Install R</strong>
+<li><strong>Download and Install R</strong>:
 <ul>
 <li>Visit <a href="https://cran.r-project.org/">CRAN</a> and download R for your operating system.</li>
 <li>Follow the installation instructions.</li>
 </ul></li>
-<li><strong>Download and Install RStudio</strong>
-<ul>
-<li>Visit <a href="https://posit.co/download/rstudio-desktop/">RStudio Download</a> and download RStudio Desktop.</li>
-<li>Install RStudio after installing R.</li>
-</ul></li>
+<li><strong>Download and Install RStudio</strong>: Visit <a href="https://posit.co/download/rstudio-desktop/">RStudio Download</a> and download RStudio Desktop.</li>
 </ol>
-<hr>
-</section>
 <section id="creating-and-working-within-a-folder" class="level2">
 <h2 class="anchored" data-anchor-id="creating-and-working-within-a-folder">Creating and Working Within a Folder</h2>
-<ol type="1">
-<li><strong>Create a Project Folder</strong>
-<ul>
-<li>In RStudio, go to <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code>.</li>
-<li>Name your folder (e.g., <code>myproject</code>) and choose a location.</li>
-<li>Click <code>Create Project</code>.</li>
-</ul></li>
-<li><strong>Set Working Directory</strong>
-<ul>
-<li><p>RStudio automatically sets the working directory to your project folder.</p></li>
-<li><p>To check:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>To set manually:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/path/to/myproject"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
+<p><strong>Create a Project Folder</strong> - In RStudio, go to <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code>. - Name your folder (e.g., <code>myproject</code>) and choose a location. - Click <code>Create Project</code>.</p>
+<ol start="2" type="1">
+<li><strong>Set Working Directory</strong></li>
 </ol>
+<p>RStudio automatically sets the working directory to your project folder, but just to make sure, type the following into the console, and press enter:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To set manually:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/path/to/myproject"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Your Rstudio window should look as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Rstudio.png" class="img-fluid figure-img"></p>
+<figcaption>RStudio Window</figcaption>
+</figure>
+</div>
+<p>The console, shown in this window, is where you can type R commands and see the output immediately. This is good for interactive work, quick tests, and project setup. Simply type the R command you want to execute, and press enter to run it.</p>
 <hr>
 </section>
-<section id="bonus-using-renv-for-package-management" class="level2">
-<h2 class="anchored" data-anchor-id="bonus-using-renv-for-package-management">Bonus: Using <code>renv</code> for Package Management</h2>
+<section id="installing-and-managing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="installing-and-managing-packages">Installing and Managing Packages</h2>
+<p>For package installation, you can use the <code>install.packages()</code> function. For example, to install the <code>ggplot2</code> package, you would run:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can install multiple packages at once by passing a character vector to <code>install.packages()</code>. For example:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"tidyr"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bonus: Reproducible Environments in R (Not necessary, but encouraged!)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Many people simply use the “install.packages()” function to install packages, but this does not ensure reproducibility. Instead, we recommend using the <code>renv</code> package to manage your R packages and their versions, and the DESCRIPTION file approach to record which packages you’ve installed. To install <code>renv</code>, run:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We also recommend installing the <code>usethis</code> package to help manage your project. `usethis includes great functionality for creating R-projects which follow standards.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="initialise-environment" class="level3">
+<h3 class="anchored" data-anchor-id="initialise-environment">Initialise Environment</h3>
 <ol type="1">
-<li><p><strong>Initialize renv</strong> <code>r     install.packages("renv")     renv::init()</code></p></li>
-<li><p><strong>Create a DESCRIPTION File</strong></p>
-<ul>
-<li><p>In your project folder, create a file named <code>DESCRIPTION</code> with content like:</p>
-<pre><code>Package: myproject
-Type: Project
-Title: Example Project
-Version: 0.1.0
-Imports:
-      dplyr,
-      ggplot2</code></pre></li>
-</ul></li>
-<li><p><strong>Install usethis and Use DESCRIPTION</strong> <code>r     install.packages("usethis")     usethis::use_description()</code></p></li>
-<li><p><strong>Install Packages from DESCRIPTION</strong> <code>r     renv::install("dplyr")     renv::install("ggplot2")</code></p></li>
-<li><p><strong>Snapshot the Environment</strong> <code>r     renv::snapshot()</code></p></li>
+<li><p><strong>Initialize renv</strong>: This creates a new project environment. Essentially a folder where project specific packages are installed, a document that tracks the packages used in the project, and a way to reproduce the environment later.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Create a DESCRIPTION File</strong>: This is a standard file in R that contains metadata about your project. The document created by <code>renv</code> contains a really long list of all packages used in the project, and the packages that those packages depend on! The DESCRIPTION file contains just a list of the packages you installed, making it easier for people to see what you’ve done. The template can easily be created using this command</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_description</span>(<span class="at">check_name =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Install Packages from and add them to the description</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_package</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Snapshot the Environment</strong>: After you’ve installed all your packages and added them to the DESCRIPTION file, you can create a snapshot of your environment. This will record the exact versions of all packages used in your project.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 <p>This workflow helps you organize your project, manage packages reproducibly, and share your setup with others.</p>
+</section>
+</div>
+</div>
+</div>
 
 
 </section>
