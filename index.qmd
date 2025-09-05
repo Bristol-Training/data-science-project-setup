@@ -20,7 +20,7 @@ when starting training, or creating a new data science project:
 
 To start setup immediately, click the button below:
 
-Get Started](pages/01-initial-setup.qmd){.btn .btn-primary}
+[Get Started](pages/01-initial-setup.qmd){.btn .btn-primary}
 
 This guide also includes:
 
