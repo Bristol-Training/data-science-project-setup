@@ -4,8 +4,6 @@ format: html
 ---
 
 
-
-
 Here we show you how to:
 
 1. Open a Terminal
