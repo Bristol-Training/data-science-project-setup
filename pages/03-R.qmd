@@ -6,6 +6,10 @@ format: html
 We recommend using Rstudio to work with R. Rstudio is an IDE (integrated development environment) that makes it easier to write and run R code. R itself is a powerful programming language for statistical computing and graphics. R needs to be downloaded
 first, then RStudio.
 
+::: {.callout-tip}
+If you are using a University of Bristol computer, you will find R and RStudio in *Company Portal*.
+:::
+
 
 1. **Download and Install R**:
     - Visit [CRAN](https://cran.r-project.org/) and download R for your operating system.
