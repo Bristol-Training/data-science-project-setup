@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-879a5a930cb54ed00ab785b4a00eb2a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3d628c3d5633b06430e1331a81e19e24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -191,7 +191,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-and-working-within-a-folder" id="toc-creating-and-working-within-a-folder" class="nav-link active" data-scroll-target="#creating-and-working-within-a-folder">Creating and Working Within a Folder</a></li>
+  <li><a href="#creating-and-working-within-a-folder" id="toc-creating-and-working-within-a-folder" class="nav-link active" data-scroll-target="#creating-and-working-within-a-folder">Creating and Working Within a Folder</a>
+  <ul class="collapse">
+  <li><a href="#writing-and-running-r-scripts" id="toc-writing-and-running-r-scripts" class="nav-link" data-scroll-target="#writing-and-running-r-scripts">Writing and Running R Scripts</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
+  </ul></li>
   <li><a href="#installing-and-managing-packages" id="toc-installing-and-managing-packages" class="nav-link" data-scroll-target="#installing-and-managing-packages">Installing and Managing Packages</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/data-science-project-setup/edit/main/pages/03-R.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/data-science-project-setup/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -219,6 +223,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>We recommend using Rstudio to work with R. Rstudio is an IDE (integrated development environment) that makes it easier to write and run R code. R itself is a powerful programming language for statistical computing and graphics. R needs to be downloaded first, then RStudio.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are using a University of Bristol computer, you will find R and RStudio in <em>Company Portal</em>.</p>
+</div>
+</div>
 <ol type="1">
 <li><strong>Download and Install R</strong>:
 <ul>
@@ -245,7 +262,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>The console, shown in this window, is where you can type R commands and see the output immediately. This is good for interactive work, quick tests, and project setup. Simply type the R command you want to execute, and press enter to run it.</p>
+<section id="writing-and-running-r-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="writing-and-running-r-scripts">Writing and Running R Scripts</h3>
+<p>To write longer pieces of code, you can create an R script. Go to <code>File</code> &gt; <code>New File</code> &gt; <code>R Script</code>. This opens a new tab where you can write and save your R code.</p>
+<p>::: ::: {.callout} ### RStudio Layout This will mean you have a script open in the top left pane of RStudio. You can write your R code here. The console should be below it, this is where you can see the output of your code or enter commands directly for exploration/experimentation. In the top right pane, you have your environment and history tabs. The environment tab shows you the variables and data frames you have created in your current R session. The history tab shows you a list of all the commands you have run in the console. And finally, in the bottom right pane, you have the files, plots, packages, and help tabs. The files tab shows you the files in your working directory. The plots tab shows you any plots you create. The packages tab shows you the R packages you have installed and loaded. And the help tab provides documentation for R functions and packages.</p>
+<p>:::</p>
+</section>
+<section id="running-code" class="level3">
+<h3 class="anchored" data-anchor-id="running-code">Running Code</h3>
+<p>You can run the code in the script by highlighting it and clicking the “Run” button or pressing <code>Ctrl + Enter</code> (Windows) or <code>Cmd + Enter</code> (Mac). You can also click the “Source” button to run the entire script.</p>
+<p><strong>Make sure to save your script</strong> by going to <code>File</code> &gt; <code>Save</code> or pressing <code>Ctrl + S</code> (Windows) or <code>Cmd + S</code> (Mac). Save it in your project folder with a <code>.R</code> extension, for example, <code>analysis.R</code>.</p>
 <hr>
+</section>
 </section>
 <section id="installing-and-managing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="installing-and-managing-packages">Installing and Managing Packages</h2>
@@ -254,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You can install multiple packages at once by passing a character vector to <code>install.packages()</code>. For example:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"tidyr"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -263,7 +291,7 @@ Bonus: Reproducible Environments in R (Not necessary, but encouraged!)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Many people simply use the “install.packages()” function to install packages, but this does not ensure reproducibility. Instead, we recommend using the <code>renv</code> package to manage your R packages and their versions, and the DESCRIPTION file approach to record which packages you’ve installed. To install <code>renv</code>, run:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
