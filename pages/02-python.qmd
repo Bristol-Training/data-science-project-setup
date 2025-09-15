@@ -114,7 +114,7 @@ with this command:
 uv add jupyterlab
 ```
 
-For the "Introduction to Data Analysis in Python" course (see [here](https://bristol-training.github.io/introduction-to-data-analysis-in-python/)), you would need the `pandas` and `seaborn` package. You can add these with:
+For the [Introduction to Data Analysis in Python course](https://bristol-training.github.io/data-analysis-python-1/), you would need the `pandas` and `seaborn` package. You can add these with:
 
 ```bash
 uv add pandas seaborn
