@@ -43,7 +43,7 @@ winget install astral-uv.uv
 ```
 
 If this does not work, you may need to open
-PowerShell. To do this, search for "PowerShell" in the start menu, open it, Then enter the following command:
+PowerShell (another type of terminal program). To do this, search for "PowerShell" in the start menu, open it, Then enter the following command:
 
 ```bat
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
