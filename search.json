@@ -1,45 +1,5 @@
 [
   {
-    "objectID": "pages/04-terminal-cheatsheet.html",
-    "href": "pages/04-terminal-cheatsheet.html",
-    "title": "Terminal Cheatsheet",
-    "section": "",
-    "text": "A terminal is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.\n\n\n\n\n\n\nNote\n\n\n\nOn Windows, the program used to run terminal commands is called Command Prompt.\n\n\n\nWindows: The terminal program is called Command Prompt. There is also Powershell, a more modern alternative (which has some different commands).\nMac: The terminal app is called Terminal.\nLinux: Most distributions include a Terminal application.",
-    "crumbs": [
-      "Terminal Cheatsheet"
-    ]
-  },
-  {
-    "objectID": "pages/04-terminal-cheatsheet.html#what-is-a-terminal",
-    "href": "pages/04-terminal-cheatsheet.html#what-is-a-terminal",
-    "title": "Terminal Cheatsheet",
-    "section": "",
-    "text": "A terminal is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.\n\n\n\n\n\n\nNote\n\n\n\nOn Windows, the program used to run terminal commands is called Command Prompt.\n\n\n\nWindows: The terminal program is called Command Prompt. There is also Powershell, a more modern alternative (which has some different commands).\nMac: The terminal app is called Terminal.\nLinux: Most distributions include a Terminal application.",
-    "crumbs": [
-      "Terminal Cheatsheet"
-    ]
-  },
-  {
-    "objectID": "pages/04-terminal-cheatsheet.html#basic-terminal-commands",
-    "href": "pages/04-terminal-cheatsheet.html#basic-terminal-commands",
-    "title": "Terminal Cheatsheet",
-    "section": "Basic Terminal Commands",
-    "text": "Basic Terminal Commands\nHere are a few basic commands that work across most systems:\n\n\n\n\n\n\n\n\n\nCommand\nWindows\nMac/Linux\nDescription\n\n\n\n\nList files\ndir\nls\nShows files in the current folder\n\n\nChange folder\ncd foldername\ncd foldername\nMove into a folder\n\n\nGo up a folder\ncd ..\ncd ..\nMove up one level\n\n\nMake a folder\nmkdir name\nmkdir name\nCreate a new folder\n\n\nRemove a file\ndel file.txt\nrm file.txt\nDelete a file",
-    "crumbs": [
-      "Terminal Cheatsheet"
-    ]
-  },
-  {
-    "objectID": "pages/04-terminal-cheatsheet.html#why-use-terminal-commands",
-    "href": "pages/04-terminal-cheatsheet.html#why-use-terminal-commands",
-    "title": "Terminal Cheatsheet",
-    "section": "Why Use Terminal Commands?",
-    "text": "Why Use Terminal Commands?\nUsing basic terminal commands makes it easier to:\n\nNavigate projects: Quickly move between folders and files.\nRun scripts: Start Python or R scripts directly.\nManage environments: Create and activate virtual environments for Python or R.\nAutomate tasks: Use simple commands to install packages, update code, or clean up files.\n\nLearning a few terminal commands helps you work more efficiently and gives you more control over your Python and R projects.",
-    "crumbs": [
-      "Terminal Cheatsheet"
-    ]
-  },
-  {
     "objectID": "pages/01-initial-setup.html",
     "href": "pages/01-initial-setup.html",
     "title": "Initial Setup",
@@ -67,86 +27,6 @@
     "text": "Creating a Folder\nThe commands to make a directory and navigate into it are the same for Windows, Mac, and Linux. To create a new folder and move into it, use the following commands in your Command Prompt/Terminal:\nmkdir my_project\nPress Enter.",
     "crumbs": [
       "Initial Setup (All projects)"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html",
-    "href": "pages/02-python.html",
-    "title": "Python Environment Setup",
-    "section": "",
-    "text": "In the previous section, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.\nNow that you are in this folder, you will want to install all the tools you need for your code to run, and to do your research. Virtual environments, which we create here, are a great way to keep all the tools you need organized alongside your code and separate from other projects.",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html#install-package-manager",
-    "href": "pages/02-python.html#install-package-manager",
-    "title": "Python Environment Setup",
-    "section": "Install Package Manager",
-    "text": "Install Package Manager\nPackage manager installation should only need to be done once on your computer.\nInstructions are included below. If you encounter any issues, see here for more installation methods to try. Or contact the JGI team.",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html#install-uv",
-    "href": "pages/02-python.html#install-uv",
-    "title": "Python Environment Setup",
-    "section": "Install UV",
-    "text": "Install UV\n\nWindowsMacLinux\n\n\nOpen your terminal and run:\nwinget install astral-uv.uv\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\n\nAfter installation, check that uv is available by typing uv --version, then pressing enter. You may need to restart your terminal for the changes to take effect.",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html#move-into-project-directory",
-    "href": "pages/02-python.html#move-into-project-directory",
-    "title": "Python Environment Setup",
-    "section": "Move into Project Directory",
-    "text": "Move into Project Directory\nTo set up your Python environment, you need to be in your project directory. Follow these steps:\n\nOpen your terminal.\nCreate or navigate to your project directory.\n\nIf it is not clear how to do so, please refer to the previous section.\nTo check you are in the correct directory, enter the following command:\n\nWindowsMacLinux\n\n\ncd\n\n\npwd\n\n\npwd\n\n\n\n\nCreate a Virtual Environment\nEnter the following command to create a minimal virtual environment:\nuv init --bare\nThis will create a pyproject.toml file, which will record information on all of the packages you install in your virtual environment.\n\n\nInstall Packages\nFor all projects we need jupyterlab, this is where we edit code. This can be added to your project with this command:\nuv add jupyterlab\nFor the Introduction to Data Analysis in Python course, you would need the pandas and seaborn package. You can add these with:\nuv add pandas seaborn\nGenerally speaking, to add a package to your environment, you can use the following command:\nuv add &lt;package-name&gt;\nReplace &lt;package-name&gt; with the name of the package you want to install.",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html#opening-jupyterlab",
-    "href": "pages/02-python.html#opening-jupyterlab",
-    "title": "Python Environment Setup",
-    "section": "Opening JupyterLab",
-    "text": "Opening JupyterLab\nNow you can open JupyterLab with:\nuv run jupyter lab\nThis will take some time, and you will see text being printed in the terminal. Once JupyterLab is running, a browser window should pop open. This window should like similar to the image below.\n\n\n\nJupyterLab Window",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html#create-a-notebook",
-    "href": "pages/02-python.html#create-a-notebook",
-    "title": "Python Environment Setup",
-    "section": "Create a Notebook",
-    "text": "Create a Notebook\nTo create a notebook, click the “Notebook” icon in the JupyterLab launcher. The window should now look like this:\n\n\n\nJupyterLab Notebook, with key features highlighted with arrows and blue boxes.\n\n\nIn each cell, python code can be entered. It can be run by clicking the “Run” button or by pressing Shift + Enter.",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "pages/02-python.html#summary",
-    "href": "pages/02-python.html#summary",
-    "title": "Python Environment Setup",
-    "section": "Summary",
-    "text": "Summary\nWell done, you have created an interactive JupyterLab environment for your Python project! You should now be able to follow along with our Python courses.\nThe steps in this page are crucial for setting up your Python environment effectively, and we recommend you follow these for your own projects, as well as for our courses.",
-    "crumbs": [
-      "Python"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Project Setup Guidance",
-    "section": "",
-    "text": "This site provides guidance for setting up data science projects for the training we deliver, but also more generally when you begin to use python or R in your own work. We believe that the courses we deliver should teach you programming concepts, but also should set you up for using these tools for your research.\nMain Steps: Regardless of the language you are using, these are the key steps you need to follow when starting training, or creating a new data science project:\n\n\n\nProject Setup Diagram\n\n\nTo start setup immediately, click the button below:\nGet Started\nThis guide also includes:\n\nA Terminal Cheatsheet goes through some basics on using the terminal that you may find helpful\nWhy do we do it like this? See the FAQs\n\nThere are many approaches to setting up and using R/python, but we have used our experience in teaching and using these tools to come up with a project setup that is simple and flexible enough for anyone to do reproducible research. If you have any suggestions, please feel free to make suggestion here.\nSee here for more resources on environment management and setting up reproducible data science projects",
-    "crumbs": [
-      "Home"
     ]
   },
   {
@@ -260,10 +140,130 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Setup Guidance",
+    "section": "",
+    "text": "This site provides guidance for setting up data science projects for the training we deliver, but also more generally when you begin to use python or R in your own work. We believe that the courses we deliver should teach you programming concepts, but also should set you up for using these tools for your research.\nMain Steps: Regardless of the language you are using, these are the key steps you need to follow when starting training, or creating a new data science project:\n\n\n\nProject Setup Diagram\n\n\nTo start setup immediately, click the button below:\nGet Started\nThis guide also includes:\n\nA Terminal Cheatsheet goes through some basics on using the terminal that you may find helpful\nWhy do we do it like this? See the FAQs\n\nThere are many approaches to setting up and using R/python, but we have used our experience in teaching and using these tools to come up with a project setup that is simple and flexible enough for anyone to do reproducible research. If you have any suggestions, please feel free to make suggestion here.\nSee here for more resources on environment management and setting up reproducible data science projects",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html",
+    "href": "pages/02-python.html",
+    "title": "Python Environment Setup",
+    "section": "",
+    "text": "In the previous section, we showed you how to open a terminal, create a folder, and move “into” the folder. You will need to do this for every data science project.\nNow that you are in this folder, you will want to install all the tools you need for your code to run, and to do your research. Virtual environments, which we create here, are a great way to keep all the tools you need organized alongside your code and separate from other projects.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#install-package-manager",
+    "href": "pages/02-python.html#install-package-manager",
+    "title": "Python Environment Setup",
+    "section": "Install Package Manager",
+    "text": "Install Package Manager\nPackage manager installation should only need to be done once on your computer.\nInstructions are included below. If you encounter any issues, see here for more installation methods to try. Or contact the JGI team.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#install-uv",
+    "href": "pages/02-python.html#install-uv",
+    "title": "Python Environment Setup",
+    "section": "Install UV",
+    "text": "Install UV\n\nWindowsMacLinux\n\n\nOpen your terminal and run:\nwinget install astral-uv.uv\nIf this does not work, you may need to open PowerShell. To do this, search for “PowerShell” in the start menu, open it, Then enter the following command:\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\nIf this still does not work, please see the UV installation instructions.\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\n\nAfter installation, check that uv is available by typing uv --version, then pressing enter. You may need to restart your terminal for the changes to take effect.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#move-into-project-directory",
+    "href": "pages/02-python.html#move-into-project-directory",
+    "title": "Python Environment Setup",
+    "section": "Move into Project Directory",
+    "text": "Move into Project Directory\nTo set up your Python environment, you need to be in your project directory. Follow these steps:\n\nOpen your terminal.\nCreate or navigate to your project directory.\n\nIf it is not clear how to do so, please refer to the previous section.\nTo check you are in the correct directory, enter the following command:\n\nWindowsMacLinux\n\n\ncd\n\n\npwd\n\n\npwd\n\n\n\n\nCreate a Virtual Environment\nEnter the following command to create a minimal virtual environment:\nuv init --bare\nThis will create a pyproject.toml file, which will record information on all of the packages you install in your virtual environment.\n\n\nInstall Packages\nFor all projects we need jupyterlab, this is where we edit code. This can be added to your project with this command:\nuv add jupyterlab\nFor the Introduction to Data Analysis in Python course, you would need the pandas and seaborn package. You can add these with:\nuv add pandas seaborn\nGenerally speaking, to add a package to your environment, you can use the following command:\nuv add &lt;package-name&gt;\nReplace &lt;package-name&gt; with the name of the package you want to install.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#opening-jupyterlab",
+    "href": "pages/02-python.html#opening-jupyterlab",
+    "title": "Python Environment Setup",
+    "section": "Opening JupyterLab",
+    "text": "Opening JupyterLab\nNow you can open JupyterLab with:\nuv run jupyter lab\nThis will take some time, and you will see text being printed in the terminal. Once JupyterLab is running, a browser window should pop open. This window should like similar to the image below.\n\n\n\nJupyterLab Window",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#create-a-notebook",
+    "href": "pages/02-python.html#create-a-notebook",
+    "title": "Python Environment Setup",
+    "section": "Create a Notebook",
+    "text": "Create a Notebook\nTo create a notebook, click the “Notebook” icon in the JupyterLab launcher. The window should now look like this:\n\n\n\nJupyterLab Notebook, with key features highlighted with arrows and blue boxes.\n\n\nIn each cell, python code can be entered. It can be run by clicking the “Run” button or by pressing Shift + Enter.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
+    "objectID": "pages/02-python.html#summary",
+    "href": "pages/02-python.html#summary",
+    "title": "Python Environment Setup",
+    "section": "Summary",
+    "text": "Summary\nWell done, you have created an interactive JupyterLab environment for your Python project! You should now be able to follow along with our Python courses.\nThe steps in this page are crucial for setting up your Python environment effectively, and we recommend you follow these for your own projects, as well as for our courses.",
+    "crumbs": [
+      "Python"
+    ]
+  },
+  {
     "objectID": "pages/06-resources.html",
     "href": "pages/06-resources.html",
     "title": "Resources",
     "section": "",
     "text": "Please see below for more resources on environment management and setting up reproducible data science projects:\n\nReproducible Data Science Project:\nUV: A more detailed tutorial on UV d2and its features, see here\nPixi: Pixi is another package manager, useful for conda packages. See here for a great tutorial.\n\nFor all of our course, please see our course directory"
+  },
+  {
+    "objectID": "pages/04-terminal-cheatsheet.html",
+    "href": "pages/04-terminal-cheatsheet.html",
+    "title": "Terminal Cheatsheet",
+    "section": "",
+    "text": "A terminal is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.\n\n\n\n\n\n\nNote\n\n\n\nOn Windows, the program used to run terminal commands is called Command Prompt.\n\n\n\nWindows: The terminal program is called Command Prompt. There is also Powershell, a more modern alternative (which has some different commands).\nMac: The terminal app is called Terminal.\nLinux: Most distributions include a Terminal application.",
+    "crumbs": [
+      "Terminal Cheatsheet"
+    ]
+  },
+  {
+    "objectID": "pages/04-terminal-cheatsheet.html#what-is-a-terminal",
+    "href": "pages/04-terminal-cheatsheet.html#what-is-a-terminal",
+    "title": "Terminal Cheatsheet",
+    "section": "",
+    "text": "A terminal is a text-based interface that lets you interact with your computer by typing commands. Instead of clicking through menus, you type instructions directly.\n\n\n\n\n\n\nNote\n\n\n\nOn Windows, the program used to run terminal commands is called Command Prompt.\n\n\n\nWindows: The terminal program is called Command Prompt. There is also Powershell, a more modern alternative (which has some different commands).\nMac: The terminal app is called Terminal.\nLinux: Most distributions include a Terminal application.",
+    "crumbs": [
+      "Terminal Cheatsheet"
+    ]
+  },
+  {
+    "objectID": "pages/04-terminal-cheatsheet.html#basic-terminal-commands",
+    "href": "pages/04-terminal-cheatsheet.html#basic-terminal-commands",
+    "title": "Terminal Cheatsheet",
+    "section": "Basic Terminal Commands",
+    "text": "Basic Terminal Commands\nHere are a few basic commands that work across most systems:\n\n\n\n\n\n\n\n\n\nCommand\nWindows\nMac/Linux\nDescription\n\n\n\n\nList files\ndir\nls\nShows files in the current folder\n\n\nChange folder\ncd foldername\ncd foldername\nMove into a folder\n\n\nGo up a folder\ncd ..\ncd ..\nMove up one level\n\n\nMake a folder\nmkdir name\nmkdir name\nCreate a new folder\n\n\nRemove a file\ndel file.txt\nrm file.txt\nDelete a file",
+    "crumbs": [
+      "Terminal Cheatsheet"
+    ]
+  },
+  {
+    "objectID": "pages/04-terminal-cheatsheet.html#why-use-terminal-commands",
+    "href": "pages/04-terminal-cheatsheet.html#why-use-terminal-commands",
+    "title": "Terminal Cheatsheet",
+    "section": "Why Use Terminal Commands?",
+    "text": "Why Use Terminal Commands?\nUsing basic terminal commands makes it easier to:\n\nNavigate projects: Quickly move between folders and files.\nRun scripts: Start Python or R scripts directly.\nManage environments: Create and activate virtual environments for Python or R.\nAutomate tasks: Use simple commands to install packages, update code, or clean up files.\n\nLearning a few terminal commands helps you work more efficiently and gives you more control over your Python and R projects.",
+    "crumbs": [
+      "Terminal Cheatsheet"
+    ]
   }
 ]
