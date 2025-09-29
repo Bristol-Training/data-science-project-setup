@@ -43,13 +43,13 @@ winget install astral-uv.uv
 ```
 
 If this does not work, you may need to open
-PowerShell as an administrator. To do this, search for "PowerShell" in the start menu, right-click it, and select "Run as administrator". Then enter the following command:
+PowerShell. To do this, search for "PowerShell" in the start menu, open it, Then enter the following command:
 
 ```bat
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-If this still does not work, please see the [UV installation instructions](https://docs.astral.sh/uv/getting-started/installation/)
+If this still does not work, please see the [UV installation instructions](https://docs.astral.sh/uv/getting-started/installation/). 
 
 ### Mac
 
