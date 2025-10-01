@@ -36,14 +36,7 @@ Instructions are included below. If you encounter any issues, see [here](https:/
 
 ### Windows
 
-Open your terminal and run:
-
-```bat
-winget install astral-uv.uv
-```
-
-If this does not work, you may need to open
-PowerShell (another type of terminal program). To do this, search for "PowerShell" in the start menu, open it, Then enter the following command:
+Open your Command Prompt and run:
 
 ```bat
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
