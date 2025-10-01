@@ -174,7 +174,7 @@
     "href": "pages/02-python.html#install-uv",
     "title": "Python Environment Setup",
     "section": "Install UV",
-    "text": "Install UV\n\nWindowsMacLinux\n\n\nOpen your terminal and run:\nwinget install astral-uv.uv\nIf this does not work, you may need to open PowerShell (another type of terminal program). To do this, search for “PowerShell” in the start menu, open it, Then enter the following command:\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\nIf this still does not work, please see the UV installation instructions.\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\n\nAfter installation, check that uv is available by typing uv --version, then pressing enter. You may need to restart your terminal for the changes to take effect.",
+    "text": "Install UV\n\nWindowsMacLinux\n\n\nOpen your Command Prompt and run:\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\nIf this still does not work, please see the UV installation instructions.\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\nOpen Terminal and run:\ncurl -Ls https://astral.sh/uv/install.sh | bash\n\n\n\nAfter installation, check that uv is available by typing uv --version, then pressing enter. You may need to restart your terminal for the changes to take effect.",
     "crumbs": [
       "Python"
     ]
